@@ -1,0 +1,282 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin: 0;
+}
+
+body{
+    background-color: #e7d1de;
+}
+
+.header{
+    /* width: 100%; */
+    display: flex;
+    padding: 0.5em;
+    background-color: #131921;
+}
+
+.logo{
+    width: 70%;
+}
+
+.img-logo{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.cart-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.img-cart{
+    width: 60%;
+    height: 60%;
+    border-radius: 8px;
+}
+
+.profile-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.img-profile{
+    width: 60%;
+    height: 60%;
+    border-radius: 8px;
+}
+
+.address{
+    width: 100%;
+    padding: 0 1em;
+}
+
+.renglon{
+    display: flex;
+    flex-direction: column;
+    padding: 0.4em;
+    gap: 0.5em;
+}
+
+#name{
+    width: 70%;
+}
+
+#last_name{
+    width: 70%;
+}
+
+#state{
+    width: 60%;
+}
+
+#city{
+    width: 60%;
+}
+
+#zip_code{
+    width: 30%;
+}
+
+.payment_method{
+    width: 100%;
+    padding: 0 1em;
+}
+
+#cardholder_name{
+    width: 70%;
+}
+
+#expiration_date{
+    width: 40%;
+}
+
+#cvv{
+    width: 20%;
+}
+
+.order_summary{
+    padding: 0 1em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-summary-section{
+    margin: 0.2em 0;
+}
+
+.sub_container_summary{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+    padding: 0.5em;
+    gap: 1em;
+    background-color: gray;
+}
+
+.renglon_summary{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (min-width: 780px){/*Esto si se ve en un celular*/
+    *{
+        box-sizing: border-box;
+    }
+    
+    html,body{
+        margin: 0;
+    }
+    
+    body{
+        background-color: #e7d1de;
+    }
+    
+    .header{
+        /* width: 100%; */
+        display: flex;
+        padding: 0.5em;
+        background-color: #131921;
+    }
+
+    .logo{
+        width: 70%;
+    }
+
+    .img-logo{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    .cart-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-cart{
+        width: 60%;
+        height: 60%;
+        border-radius: 8px;
+    }
+
+    .profile-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+    
+    .img-profile{
+        width: 60%;
+        height: 60%;
+        border-radius: 8px;
+    }
+
+    .address{
+        width: 70%;
+        padding: 0 1em;
+    }
+
+    .renglon{
+        display: flex;
+        padding: 0.4em;
+        gap: 0.5em;
+    }
+
+    #name{
+        width: 50%;
+    }
+
+    #last_name{
+        width: 50%;
+    }
+
+    #direction{
+        width: 70%;
+    }
+
+    #state{
+        width: 40%;
+    }
+
+    #city{
+        width: 40%;
+    }
+
+    #zip_code{
+        width: 20%;
+    }
+
+    .title-address-section{
+        padding-left: 0.3em;
+    }
+
+    .payment_method{
+        width: 70%;
+        padding: 0 1em;
+    }
+
+    .renglon{
+        display: flex;
+        padding: 0.4em;
+        gap: 0.5em;
+    }
+
+    #number_card{
+        width: 100%;
+    }
+
+    #cardholder_name{
+        width: 40%;
+    }
+
+    #expiration_date{
+        width: 40%;
+    }
+
+    #cvv{
+        width: 20%;
+    }
+
+    .title-payment-section{
+        padding-left: 0.3em;
+    }
+
+    .order_summary{
+        padding: 0 1em;
+        width: 19%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-summary-section{
+        padding: 0 0.3em;
+        margin: 0.2em 0.1em;
+    }
+
+    .sub_container_summary{
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em;
+        padding: 0.5em;
+        gap: 1em;
+        background-color: gray;
+    }
+
+    .renglon_summary{
+        display: flex;
+        justify-content: space-between;
+    }
+}
