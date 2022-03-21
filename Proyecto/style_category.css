@@ -1,157 +1,192 @@
-*{
-    box-sizing: border-box;
-}
-
-html,body{
-    margin: 0;
-}
-
-body{
-    background-color: #e7d1de;
-}
-
-.header{
-    /* width: 100%; */
-    display: flex;
-    padding: 0.5em;
-    background-color: #131921;
-}
-
-.logo{
-    width: 70%;
-}
-
-.img-logo{
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-}
-
-.cart-icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15%;
-}
-
-.img-cart{
-    width: 60%;
-    height: 60%;
-    border-radius: 8px;
-}
-
-.profile-icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15%;
-}
-
-.img-profile{
-    width: 60%;
-    height: 60%;
-    border-radius: 8px;
-}
-
-.navigation-bar{
-    background-color: rgb(144, 158, 172);
-    /* display: flex; */
-    /* padding: 1em; */
-}
-
-.navigation-list{
-    padding: 0;
-    width: 100%;
-    list-style: none;
-}
-
-.nav-item{
-    font-size: 1.3em;
-    padding: 0.3em;
-}
-
-.img-featured{
-    border-radius: 8px;
-    width: 100%;
-}
-
-.featured-photo{
-    width: 100%;
-}
-
-.content{
-    padding: 0.5em;
-}
-
-.img-product{
-    border-radius: 8px;
-    width: 40%;
-}
-
-.product-description{
-    /* padding-left: 0.2em; */
-    width: 60%;
-}
-
-.product{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.list-feature{
-    font-size: 1.1em;
-    padding-left: 1.5em;
-}
-
-.price{
-    width: 100%;
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.price > h1{
-    width: 45%;
-}
-
-.featured-text{
-    margin: 0;
-    padding: 0.5em;
-    font-size: 1.3em;
-    text-align: justify;
-}
-
-.title-products{
-    text-align: center;
-    margin: 0;
-    padding: 0.3em;
-}
-
-.name-product{
-    margin: 0;
-    padding: 0.3em;
-    text-align: center;
-}
-
-.ad{
-    display: none;
-}
-
-.list-products{
-    /* text-align: center; */
-    width: 100%;
-    padding: 0.5em;
-}
-
-.footer{
-    padding: 1em;
-}
-
-
-@media (min-width: 780px){/*Esto si se ve en un celular*/
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-ExtraLight.ttf');
+    font-weight: 200;
+  }
+@media (max-width: 780px){
     *{
         box-sizing: border-box;
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: bold;
+    }
+    
+    html,body{
+        margin: 0;
+    }
+    
+    body{
+        background-color: #e7d1de;
+    }
+    
+    .header{
+        /* width: 100%; */
+        display: flex;
+        padding: 0.5em;
+        gap: 0.5em;
+        background-color: #131921;
+    }
+    
+    .logo{
+        width: 70%;
+    }
+    
+    .img-logo{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    
+    .cart-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+    
+    .img-cart{
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .profile-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+    
+    .img-profile{
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .navigation-bar{
+        background-color: rgb(144, 158, 172);
+        /* display: flex; */
+        /* padding: 1em; */
+    }
+    
+    .navigation-list{
+        padding: 0;
+        width: 100%;
+        list-style: none;
+    }
+    
+    .nav-item{
+        font-size: 1.3em;
+        padding: 0.3em;
+        border-top: 0.5px solid gray;
+    }
+    
+    .img-featured{
+        border-radius: 8px;
+        width: 100%;
+    }
+    
+    .featured-photo{
+        width: 100%;
+    }
+    
+    .content{
+        padding: 0.5em;
+    }
+    
+    .img-product{
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .product-description{
+        /* padding-left: 0.2em; */
+        width: 60%;
+    }
+    
+    .product{
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 0.5px solid gray;
+        border-top: 0.5px solid gray;
+        padding-top: 1em;
+    }
+
+    .product > a{
+        width: 40%;
+    }
+    
+    .list-feature{
+        font-size: 1.1em;
+        padding-left: 1.5em;
+    }
+    
+    .price{
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .price > h1{
+        width: 45%;
+    }
+    
+    .featured-text{
+        margin: 0;
+        padding: 0.5em;
+        font-size: 1.3em;
+        text-align: justify;
+    }
+    
+    .title-products{
+        text-align: center;
+        margin: 0;
+        padding: 0.3em;
+    }
+    
+    .name-product{
+        margin: 0;
+        padding: 0.3em;
+        text-align: center;
+    }
+
+    .product-description > a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .ad{
+        display: none;
+    }
+    
+    .list-products{
+        /* text-align: center; */
+        width: 100%;
+        padding: 0.5em;
+    }
+    
+    .footer{
+        padding: 1em;
+    }
+    .nav-link{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .email-webmaster{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+
+@media (min-width: 780px){/*Esto si se ve en una computadora*/
+    *{
+        box-sizing: border-box;
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: bold;
     }
     
     html,body{
@@ -187,8 +222,7 @@ body{
     }
 
     .img-cart{
-        width: 60%;
-        height: 60%;
+        width: 100%;
         border-radius: 8px;
     }
 
@@ -200,8 +234,7 @@ body{
     }
     
     .img-profile{
-        width: 60%;
-        height: 60%;
+        width: 100%;
         border-radius: 8px;
     }
 
@@ -232,6 +265,7 @@ body{
     .list-products{
         width: 100%;
         padding: 3em;
+        padding-top: 1em;
     }
 
     .ad{
@@ -249,11 +283,12 @@ body{
         display: flex;
         align-items: center;
         gap: 0.7em;
+        border-top: 0.5px solid gray;
     }
 
     .img-product{
         border-radius: 8px;
-        width: 28%;
+        width: 100%;
     }
 
     .featured-photo{
@@ -283,11 +318,22 @@ body{
         text-align: center;
     }
 
+    .product-description > a{
+        text-decoration: none;
+        color: black;
+    }
+
     .product{
         display: flex;
         /* justify-content: space-around; */
         gap: 4em;
         padding: 0.5em;
+        border-bottom: 0.5px solid gray;
+        border-top: 0.5px solid gray;
+    }
+
+    .product > a{
+        text-align: center;
     }
 
     .price{
@@ -312,5 +358,18 @@ body{
 
     .product-description{
         width: 22%;
+    }
+
+    .nav-link{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .email-webmaster{
+        text-decoration: none;
+        color: black;
+    }
+    .price > h2,.price > h2 + button{
+        width: 50%;
     }
 }
