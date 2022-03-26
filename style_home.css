@@ -24,7 +24,7 @@
         display: flex;
         padding: 0.5em;
         gap: 0.5em;
-        background-color: #131921;
+        background-color: #354c6b;
     }
     
     .logo{
@@ -71,6 +71,8 @@
         padding: 0;
         width: 100%;
         list-style: none;
+        margin-top: 0;
+        display: none;/*SE AGREGO ESTO*/
     }
     
     .nav-item{
@@ -90,46 +92,11 @@
     
     .content{
         padding: 0.5em;
+        border-bottom: 0.5px solid gray;
     }
     
     .img-product{
         border-radius: 8px;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .product-description{
-        /* padding-left: 0.2em; */
-        width: 60%;
-    }
-    
-    .product{
-        display: flex;
-        flex-wrap: wrap;
-        border-bottom: 0.5px solid gray;
-        border-top: 0.5px solid gray;
-        padding-top: 1em;
-    }
-
-    .product > a{
-        width: 40%;
-    }
-    
-    .list-feature{
-        font-size: 1.1em;
-        padding-left: 1.5em;
-    }
-    
-    .price{
-        width: 100%;
-        padding: 1em;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .price > h1{
-        width: 45%;
     }
     
     .featured-text{
@@ -139,7 +106,7 @@
         text-align: justify;
     }
     
-    .title-products{
+    .title-best-sellers{
         text-align: center;
         margin: 0;
         padding: 0.3em;
@@ -150,25 +117,21 @@
         padding: 0.3em;
         text-align: center;
     }
-
-    .product-description > a{
-        text-decoration: none;
-        color: black;
-    }
     
     .ad{
         display: none;
     }
     
-    .list-products{
-        /* text-align: center; */
+    .best-sellers{
+        text-align: center;
         width: 100%;
-        padding: 0.5em;
     }
     
     .footer{
         padding: 1em;
+        border-top: 0.5px solid gray;
     }
+
     .nav-link{
         text-decoration: none;
         color: black;
@@ -178,10 +141,15 @@
         text-decoration: none;
         color: black;
     }
+
+    .boton-menu>button{
+        width: 20%;
+        height: 3em;
+        padding: 0;
+    }
 }
 
-
-@media (min-width: 780px){/*Esto si se ve en una computadora*/
+@media (min-width: 780px){/*Esto si se ve en un computadora*/
     *{
         box-sizing: border-box;
         font-family: 'Montserrat Alternates';
@@ -201,7 +169,7 @@
         /* width: 100%; */
         display: flex;
         padding: 0.5em;
-        background-color: #131921;
+        background-color: #354c6b;
     }
 
     .logo{
@@ -260,12 +228,13 @@
         padding: 0.5em;
         display: flex;
         justify-content: space-between;
+        border-bottom: 0.5px solid gray;
     }
 
-    .list-products{
-        width: 100%;
-        padding: 3em;
-        padding-top: 1em;
+    .best-sellers{
+        display: flex;
+        justify-content: space-around;
+        gap: 1em;
     }
 
     .ad{
@@ -288,7 +257,7 @@
 
     .img-product{
         border-radius: 8px;
-        width: 100%;
+        width: 75%;
     }
 
     .featured-photo{
@@ -306,7 +275,7 @@
         text-align: justify;
     }
 
-    .title-products{
+    .title-best-sellers{
         text-align: center;
         margin: 0;
         padding: 0.3em;
@@ -316,60 +285,27 @@
         margin: 0;
         padding: 0.3em;
         text-align: center;
-    }
-
-    .product-description > a{
-        text-decoration: none;
-        color: black;
+        font-size: 1em;
     }
 
     .product{
         display: flex;
-        /* justify-content: space-around; */
-        gap: 4em;
-        padding: 0.5em;
-        border-bottom: 0.5px solid gray;
-        border-top: 0.5px solid gray;
+        flex-direction: column;
+        align-items: center;
     }
 
     .product > a{
         text-align: center;
-    }
-
-    .price{
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 6em;
-        width: 30%;
-        /* text-align: center; */
-    }
-
-    .price > h1{
-        width: 40%;
-    }
-
-    .list-feature{
-        font-size: 1.2em;
-        /* text-align: left; */
-        padding: 0;
-    }
-
-    .product-description{
-        width: 22%;
+        padding: 0 1em;
     }
 
     .nav-link{
         text-decoration: none;
         color: black;
     }
-    
+
     .email-webmaster{
         text-decoration: none;
         color: black;
-    }
-    .price > h2,.price > h2 + button{
-        width: 50%;
     }
 }

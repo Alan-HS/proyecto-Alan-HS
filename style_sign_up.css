@@ -23,7 +23,7 @@
         /* width: 100%; */
         /* display: flex; */
         padding: 0.5em;
-        background-color: #131921;
+        background-color: #354c6b;
     }
     
     .logo{
@@ -56,14 +56,9 @@
         justify-content: center;
         /* gap: 0.7em; */
     }
-
     .email-webmaster{
         text-decoration: none;
         color: black;
-    }
-
-    .registrarse{
-        width: 100%;
     }
 }
 
@@ -87,7 +82,7 @@
         /* width: 100%; */
         display: flex;
         padding: 0.5em;
-        background-color: #131921;
+        background-color: #354c6b;
     }
 
     .logo{
@@ -121,14 +116,9 @@
         display: flex;
         flex-direction: column;
     }
-
     .email-webmaster{
         text-decoration: none;
         color: black;
-    }
-
-    .registrarse{
-        width: 100%;
     }
 
 }

@@ -24,7 +24,7 @@
         display: flex;
         padding: 0.5em;
         gap: 0.5em;
-        background-color: #131921;
+        background-color: #354c6b;
     }
     
     .logo{
@@ -135,6 +135,10 @@
         display: flex;
         justify-content: space-between;
     }
+
+    .complete_order{
+        width: 100%;
+    }
     
 }
 
@@ -158,7 +162,7 @@
         /* width: 100%; */
         display: flex;
         padding: 0.5em;
-        background-color: #131921;
+        background-color: #354c6b;
     }
 
     .logo{
@@ -290,5 +294,9 @@
     .renglon_summary{
         display: flex;
         justify-content: space-between;
+    }
+
+    .complete_order{
+        width: 100%;
     }
 }

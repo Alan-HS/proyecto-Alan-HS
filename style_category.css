@@ -24,7 +24,7 @@
         display: flex;
         padding: 0.5em;
         gap: 0.5em;
-        background-color: #131921;
+        background-color: #354c6b;
     }
     
     .logo{
@@ -71,6 +71,7 @@
         padding: 0;
         width: 100%;
         list-style: none;
+        margin-top: 0;
     }
     
     .nav-item{
@@ -79,102 +80,113 @@
         border-top: 0.5px solid gray;
     }
     
-    .img-producto{
+    .img-featured{
         border-radius: 8px;
         width: 100%;
     }
     
-    .product-photo{
+    .featured-photo{
         width: 100%;
     }
     
     .content{
         padding: 0.5em;
-        border-bottom: 0.5px solid gray;
     }
     
+    .img-product{
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+    }
     
-    .product-text{
+    .product-description{
+        /* padding-left: 0.2em; */
+        width: 60%;
+    }
+    
+    .product{
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 0.5px solid gray;
+        border-top: 0.5px solid gray;
+        padding-top: 1em;
+    }
+
+    .product > a{
+        width: 40%;
+    }
+    
+    .list-feature{
+        font-size: 1.1em;
+        padding-left: 1.5em;
+    }
+    
+    .price{
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .price > h1{
+        width: 45%;
+    }
+    
+    .featured-text{
         margin: 0;
         padding: 0.5em;
         font-size: 1.3em;
         text-align: justify;
     }
     
-    .title-opinions{
+    .title-products{
         text-align: center;
         margin: 0;
         padding: 0.3em;
     }
     
+    .name-product{
+        margin: 0;
+        padding: 0.3em;
+        text-align: center;
+    }
+
+    .product-description > a{
+        text-decoration: none;
+        color: black;
+    }
     
     .ad{
         display: none;
     }
     
-    .price-add{
-        padding: 1em;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    
-    .opinions{
-        text-align: center;
+    .list-products{
+        /* text-align: center; */
         width: 100%;
-    }
-
-    .opinion-element{
-        border-bottom: 0.5px solid gray;
+        padding: 0.5em;
     }
     
     .footer{
         padding: 1em;
     }
-    
-    .opinions{
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        gap: 0.5em;
-    }
-    
-    .author-name{
-        margin: 0;
-    }
-    
-    .insert_opinion{
-        padding: 0 1em;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        gap: 0.5em;
-    }
-    
-    
-    .field-opinion{
-        resize: none;
-        width: 100%;
-    }
-    
-    
-    .submit-opinion{
-        width: 50%;
-    }
-    
     .nav-link{
         text-decoration: none;
         color: black;
     }
-
+    
     .email-webmaster{
         text-decoration: none;
         color: black;
     }
+
+    .boton-menu>button{
+        width: 20%;
+        height: 3em;
+        padding: 0;
+    }
 }
+
 
 @media (min-width: 780px){/*Esto si se ve en una computadora*/
     *{
@@ -196,7 +208,7 @@
         /* width: 100%; */
         display: flex;
         padding: 0.5em;
-        background-color: #131921;
+        background-color: #354c6b;
     }
 
     .logo{
@@ -255,22 +267,19 @@
         padding: 0.5em;
         display: flex;
         justify-content: space-between;
-        border-bottom: 0.5px solid gray;
     }
 
-    .opinions{
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        gap: 0.5em;
+    .list-products{
+        width: 100%;
+        padding: 3em;
+        padding-top: 1em;
     }
 
     .ad{
         display:block;
     }
 
-    .img-producto{
+    .img-featured{
         border-radius: 8px;
         width: 100%;
         height: 100%;
@@ -284,7 +293,12 @@
         border-top: 0.5px solid gray;
     }
 
-    .product-photo{
+    .img-product{
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .featured-photo{
         width: 100%;
     }
 
@@ -292,61 +306,77 @@
         border-radius: 8px;
     }
 
-    .price-add{
-        padding: 1em;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .product-text{
+    .featured-text{
         margin: 0;
         padding: 0.5em;
         font-size: 1.3em;
         text-align: justify;
     }
 
-    .title-opinions{
+    .title-products{
         text-align: center;
         margin: 0;
         padding: 0.3em;
     }
 
-    .opinion-element{
-        border-bottom: 0.5px solid gray;
-    }
-
-    .author-name{
+    .name-product{
         margin: 0;
+        padding: 0.3em;
+        text-align: center;
     }
 
-    .insert_opinion{
-        padding: 0.5em 1em;
+    .product-description > a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .product{
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 30%;
+        /* justify-content: space-around; */
+        gap: 4em;
+        padding: 0.5em;
+        border-bottom: 0.5px solid gray;
+        border-top: 0.5px solid gray;
+    }
+
+    .product > a{
+        text-align: center;
+    }
+
+    .price{
+        padding: 0;
+        display: flex;
         align-items: center;
-        gap: 0.5em;
+        justify-content: space-between;
+        gap: 6em;
+        width: 30%;
+        /* text-align: center; */
     }
 
-
-    .field-opinion{
-        resize: none;
-        width: 100%;
+    .price > h1{
+        width: 40%;
     }
 
+    .list-feature{
+        font-size: 1.2em;
+        /* text-align: left; */
+        padding: 0;
+    }
 
-    .submit-opinion{
-        width: 50%;
+    .product-description{
+        width: 22%;
     }
 
     .nav-link{
         text-decoration: none;
         color: black;
     }
-
+    
     .email-webmaster{
         text-decoration: none;
         color: black;
+    }
+    .price > h2,.price > h2 + button{
+        width: 50%;
     }
 }
