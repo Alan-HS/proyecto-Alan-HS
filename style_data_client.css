@@ -272,7 +272,7 @@
     .order_summary{
         padding: 0 1em;
         padding-bottom: 1em;
-        width: 19%;
+        width:fit-content;
         display: flex;
         flex-direction: column;
     }

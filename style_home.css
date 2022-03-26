@@ -130,6 +130,7 @@
     .footer{
         padding: 1em;
         border-top: 0.5px solid gray;
+        font-size: 0.8em;
     }
 
     .nav-link{
