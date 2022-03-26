@@ -159,11 +159,6 @@
         font-size: 1.2em;
     }
 
-    .about_client{
-        /* padding: 0 2em; */
-        /* width: 25%; */
-    }
-
     .content{
         display: flex;
         flex-direction: column;
