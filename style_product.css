@@ -128,6 +128,7 @@
 
     .opinion-element{
         border-bottom: 0.5px solid gray;
+        padding: 0.5em 0;
     }
     
     .footer{
@@ -322,6 +323,7 @@
 
     .opinion-element{
         border-bottom: 0.5px solid gray;
+        padding: 0.5em 0;
     }
 
     .author-name{
@@ -330,6 +332,7 @@
 
     .insert_opinion{
         padding: 0.5em 1em;
+        padding-top: 0;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -358,4 +361,5 @@
         text-decoration: none;
         color: black;
     }
+
 }

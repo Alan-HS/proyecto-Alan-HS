@@ -173,6 +173,9 @@
         height: 3em;
         padding: 0;
     }
+    .delete-product{
+        font-size: 1em;
+    }
 }
 
 
@@ -338,5 +341,9 @@
     .email-webmaster{
         text-decoration: none;
         color: black;
+    }
+
+    .delete-product{
+        font-size: 1em;
     }
 }
