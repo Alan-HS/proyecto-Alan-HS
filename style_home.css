@@ -148,6 +148,27 @@
         height: 3em;
         padding: 0;
     }
+
+    .admin-home{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .form-admin{
+        width: 40%;
+    }
+
+    .button-admin{
+        width: 100%;
+    }
+
+    .field-text{
+        width: 100%;
+    }
+
+    .field-src{
+        width: 100%;
+    }
 }
 
 @media (min-width: 780px){/*Esto si se ve en un computadora*/
@@ -308,5 +329,26 @@
     .email-webmaster{
         text-decoration: none;
         color: black;
+    }
+
+    .admin-home{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .form-admin{
+        width: 40%;
+    }
+
+    .button-admin{
+        width: 100%;
+    }
+
+    .field-text{
+        width: 100%;
+    }
+
+    .field-src{
+        width: 100%;
     }
 }
