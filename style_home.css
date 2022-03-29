@@ -164,10 +164,30 @@
 
     .field-text{
         width: 100%;
+        resize: none;
     }
 
     .field-src{
         width: 100%;
+        resize: none;
+    }
+
+    .nav-item:hover{
+        background-color: rgb(102, 154, 206);
+    }
+    .nav-item > a:hover {
+        color: white;
+    }
+
+    #boton{
+        background-color: aqua;
+        cursor: pointer;
+        border-radius: 0.5em;
+    }
+
+    #boton:hover{
+        background-color: #354c6b;
+        color: aqua;
     }
 }
 
@@ -346,9 +366,22 @@
 
     .field-text{
         width: 100%;
+        resize: none;
     }
 
     .field-src{
         width: 100%;
+        resize: none;
+    }
+
+    .nav-item{
+        padding: 0.5em;
+    }
+
+    .nav-item:hover{
+        background-color: rgb(102, 154, 206);
+    }
+    .nav-item > a:hover {
+        color: white;
     }
 }
