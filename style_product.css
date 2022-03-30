@@ -60,6 +60,18 @@
         width: 100%;
         border-radius: 8px;
     }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
+        width: 100%;
+        border-radius: 8px;
+    }
     
     .navigation-bar{
         background-color: rgb(144, 158, 172);
@@ -202,6 +214,9 @@
         background-color: #354c6b;
         color: aqua;
     }
+    .price-text::before{
+        content: "$";
+    }
 }
 
 @media (min-width: 780px){/*Esto si se ve en una computadora*/
@@ -257,6 +272,18 @@
     }
     
     .img-profile{
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
         width: 100%;
         border-radius: 8px;
     }
@@ -389,6 +416,10 @@
     }
     .nav-item > a:hover {
         color: white;
+    }
+
+    .price-text::before{
+        content: "$";
     }
 
 }

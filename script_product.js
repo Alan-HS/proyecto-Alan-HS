@@ -33,3 +33,5 @@ function ventana(){
 }
 
 //----------------------------------------------------------
+
+// console.log(document.getElementsByClassName("price-text")[0].textContent); OBTENER EL PRECIO SIN EL SIGNO DE PESOS

@@ -205,6 +205,10 @@
         background-color: #354c6b;
         color: aqua;
     }
+
+    .price>h1::before{
+        content: "$";
+    }
 }
 
 
@@ -409,6 +413,10 @@
     }
     .nav-item > a:hover {
         color: white;
+    }
+
+    .price>h1::before{
+        content: "$";
     }
 
 }

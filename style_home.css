@@ -60,6 +60,18 @@
         width: 100%;
         border-radius: 8px;
     }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
+        width: 100%;
+        border-radius: 8px;
+    }
     
     .navigation-bar{
         background-color: rgb(144, 158, 172);
@@ -244,6 +256,18 @@
     }
     
     .img-profile{
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
         width: 100%;
         border-radius: 8px;
     }
