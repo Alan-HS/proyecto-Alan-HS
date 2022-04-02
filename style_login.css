@@ -66,6 +66,9 @@
     .registrarse{
         width: 100%;
     }
+    .iniciar-sesion{
+        width: 100%;
+    }
 }
 
 @media (min-width: 780px){/*Esto si se ve en una computadora*/
@@ -129,6 +132,10 @@
     }
 
     .registrarse{
+        width: 100%;
+    }
+
+    .iniciar-sesion{
         width: 100%;
     }
 
