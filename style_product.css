@@ -326,9 +326,10 @@
     }
 
     .img-producto{
+        max-width: 100%;
         border-radius: 8px;
-        width: 100%;
-        height: 100%;
+        width: 29vw;
+        /* height: 100%; */
     }
 
     .footer{
@@ -345,6 +346,7 @@
 
     .img-ad{
         border-radius: 8px;
+        width:20vw;
     }
 
     .price-add{
@@ -356,7 +358,7 @@
     .product-text{
         margin: 0;
         padding: 0.5em;
-        font-size: 1.3em;
+        font-size: 1.4vw;
         text-align: justify;
     }
 
@@ -369,6 +371,7 @@
     .opinion-element{
         border-bottom: 0.5px solid gray;
         padding: 0.5em 0;
+        font-size: 1.5vw;
     }
 
     .author-name{
@@ -381,7 +384,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 30%;
+        width: 50%;
         align-items: center;
         gap: 0.5em;
     }

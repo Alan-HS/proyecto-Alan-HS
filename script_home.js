@@ -23,10 +23,10 @@ function despliega_menu(){
 window.addEventListener("resize",ventana);
 
 function ventana(){
-    if(window.matchMedia("(min-width: 780px)").matches){
+    if(window.matchMedia("(min-width: 780px)").matches){//Web
         document.getElementsByClassName("navigation-list")[0].style.display = "flex";
     }
-    else{
+    else{//Movil
         band = 0;
         document.getElementsByClassName("navigation-list")[0].style.display = "none";
     }
