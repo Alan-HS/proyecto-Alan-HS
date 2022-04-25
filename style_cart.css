@@ -99,6 +99,8 @@
         border-bottom: 0.5px solid gray;
         border-top: 0.5px solid gray;
         padding-top: 1em;
+        opacity: 1;
+        transition: opacity ease 300ms;
     }
     
     .list-feature{
@@ -132,7 +134,7 @@
     }
     
     
-    .list-products{
+    #list-products{
         /* text-align: center; */
         width: 100%;
         padding: 0.5em;
@@ -143,7 +145,7 @@
         font-size: 0.8em;
     }
     
-    .checkout{
+    #checkout{
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -196,6 +198,9 @@
     }
     .price>h1::before{
         content: "$";
+    }
+    .hide{
+        opacity: 0;
     }
 }
 
@@ -275,7 +280,7 @@
     list-style: none;
     }
 
-    .list-products{
+    #list-products{
         width: 100%;
         padding: 3em;
         padding-bottom: 1em;
@@ -315,6 +320,8 @@
         border-bottom: 0.5px solid gray;
         border-top: 0.5px solid gray;
         font-size: 1.27vw;
+        opacity: 1;
+        transition: opacity ease 300ms;
     }
 
     .price{
@@ -341,7 +348,7 @@
         width: 22%;
     }
 
-    .checkout{
+    #checkout{
         display: flex;
         justify-content: space-around;
         padding-bottom: 1em;
@@ -381,5 +388,8 @@
     }
     .price>h1::before{
         content: "$";
+    }
+    .hide{
+        opacity: 0;
     }
 }
