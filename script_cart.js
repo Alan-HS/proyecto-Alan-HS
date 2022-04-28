@@ -1,5 +1,6 @@
 var boton = document.getElementById("boton");
 const cartList = "cartList";
+const keyPrice = "keyPrice";
 const cart = document.getElementById("list-products");
 const btncheckout = document.getElementById("btncheckout");
 const checkout = document.getElementById("checkout");
@@ -51,6 +52,10 @@ function paintPrice(){
     precio.classList.add("subtotal");
     precio.appendChild(text);
     checkout.insertBefore(precio,btncheckout);
+
+    let totalprice = total;
+    localStorage.setItem(keyPrice,JSON.stringify(totalprice));
+
 }
 
 function updatePrice(){

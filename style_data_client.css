@@ -139,6 +139,10 @@
     .complete_order{
         width: 100%;
     }
+
+    #buttonpayment{
+        padding-left: 1.4em;
+    }
     
 }
 
@@ -298,5 +302,9 @@
 
     .complete_order{
         width: 100%;
+    }
+
+    #buttonpayment{
+        padding-left: 1.4em;
     }
 }
