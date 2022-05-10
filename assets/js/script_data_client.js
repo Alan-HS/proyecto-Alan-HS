@@ -35,7 +35,7 @@ function paintPrice(){
                 <span>$${price}</span>
             </div>
         </div>
-        <a href="successful_order.html"><button class="complete_order">Completar orden</button></a>`;
+        <a href="../views/successful_order.php"><button class="complete_order">Completar orden</button></a>`;
     order_summ.innerHTML = html;
 }
 

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Montserrat Alternates';
-    src: url('MontserratAlternates-ExtraLight.ttf');
+    src: url('../../MontserratAlternates-ExtraLight.ttf');
     font-weight: 200;
   }
 @media (max-width: 780px){

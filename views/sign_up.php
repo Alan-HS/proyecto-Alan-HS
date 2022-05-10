@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_sign_up.css">
+    <link rel="stylesheet" href="../assets/css/style_sign_up.css">
     <title>Registro</title>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <a href="index.html"><img class="img-logo" src="10.png" alt="LOGO"></a>
+            <a href="../index.html"><img class="img-logo" src="../10.png" alt="LOGO"></a>
         </div>
     </div>
     <div class="forms">

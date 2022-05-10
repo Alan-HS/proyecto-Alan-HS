@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Montserrat Alternates';
-    src: url('MontserratAlternates-ExtraLight.ttf');
+    src: url('../../MontserratAlternates-ExtraLight.ttf');
     font-weight: 200;
   }
 @media (max-width: 780px){
@@ -60,18 +60,6 @@
         width: 100%;
         border-radius: 8px;
     }
-
-    .logout-icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15%;
-    }
-
-    .img-logout{
-        width: 100%;
-        border-radius: 8px;
-    }
     
     .navigation-bar{
         background-color: rgb(144, 158, 172);
@@ -93,54 +81,63 @@
         border-top: 0.5px solid gray;
     }
     
-    .img-producto{
+    
+    
+    .img-product{
         border-radius: 8px;
-        width: 100%;
+        width: 40%;
     }
     
-    .product-photo{
-        width: 100%;
+    .product-description{
+        /* padding-left: 0.2em; */
+        width: 60%;
     }
     
-    .content{
-        padding: 0.5em;
+    .product{
+        display: flex;
+        flex-wrap: wrap;
         border-bottom: 0.5px solid gray;
+        border-top: 0.5px solid gray;
+        padding-top: 1em;
+        opacity: 1;
+        transition: opacity ease 300ms;
+    }
+    
+    .list-feature{
+        font-size: 1.1em;
+        padding-left: 1.5em;
+    }
+    
+    .price{
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .price > h1{
+        width: 45%;
     }
     
     
-    .product-text{
-        margin: 0;
-        padding: 0.5em;
-        font-size: 1.3em;
-        text-align: justify;
-    }
-    
-    .title-opinions{
+    .title-cart{
         text-align: center;
         margin: 0;
         padding: 0.3em;
     }
     
-    
-    .ad{
-        display: none;
-    }
-    
-    #price-add{
-        padding: 1em;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    
-    .opinions{
+    .name-product{
+        margin: 0;
+        padding: 0.3em;
         text-align: center;
-        width: 100%;
     }
-
-    .opinion-element{
-        border-bottom: 0.5px solid gray;
-        padding: 0.5em 0;
+    
+    
+    #list-products{
+        /* text-align: center; */
+        width: 100%;
+        padding: 0.5em;
     }
     
     .footer{
@@ -148,44 +145,26 @@
         font-size: 0.8em;
     }
     
-    .opinions{
-        text-align: left;
+    #checkout{
         display: flex;
-        flex-direction: column;
-        padding: 1em;
-        gap: 0.5em;
-    }
-    
-    .author-name{
-        margin: 0;
-    }
-    
-    .insert_opinion{
-        padding: 0 1em;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 100%;
+        justify-content: space-around;
         align-items: center;
-        gap: 0.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 0.5px solid gray;
     }
     
+    .subtotal{
+        width: 30%;
+    }
     
-    .field-opinion{
-        resize: none;
+    .proceed-checkout{
         width: 100%;
     }
-    
-    
-    .submit-opinion{
-        width: 50%;
-    }
-    
     .nav-link{
         text-decoration: none;
         color: black;
     }
-
+    
     .email-webmaster{
         text-decoration: none;
         color: black;
@@ -195,6 +174,9 @@
         width: 20%;
         height: 3em;
         padding: 0;
+    }
+    .delete-product{
+        font-size: 1em;
     }
 
     .nav-item:hover{
@@ -214,16 +196,14 @@
         background-color: #354c6b;
         color: aqua;
     }
-    #price-text::before{
+    .price>h1::before{
         content: "$";
     }
-    #name-product{
-        font-size: 1.3em;
-        margin: 0;
-        padding: 0.5em;
-        padding-bottom: 0;
+    .hide{
+        opacity: 0;
     }
 }
+
 
 @media (min-width: 780px){/*Esto si se ve en una computadora*/
     *{
@@ -282,18 +262,6 @@
         border-radius: 8px;
     }
 
-    .logout-icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15%;
-    }
-
-    .img-logout{
-        width: 100%;
-        border-radius: 8px;
-    }
-
     .boton-menu{
         display: none;
     }
@@ -312,30 +280,10 @@
     list-style: none;
     }
 
-    .content{
-        padding: 0.5em;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 0.5px solid gray;
-    }
-
-    .opinions{
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        gap: 0.5em;
-    }
-
-    .ad{
-        display:block;
-    }
-
-    .img-producto{
-        max-width: 100%;
-        border-radius: 8px;
-        width: 29vw;
-        /* height: 100%; */
+    #list-products{
+        width: 100%;
+        padding: 3em;
+        padding-bottom: 1em;
     }
 
     .footer{
@@ -343,77 +291,89 @@
         display: flex;
         align-items: center;
         gap: 0.7em;
-        border-top: 0.5px solid gray;
     }
 
-    .product-photo{
-        width: 100%;
-    }
-
-    .img-ad{
+    .img-product{
         border-radius: 8px;
-        width:20vw;
+        width: 28%;
     }
 
-    #price-add{
-        padding: 1em;
-        display: flex;
-        justify-content: space-around;
-    }
 
-    .product-text{
-        margin: 0;
-        padding: 0.5em;
-        font-size: 1.4vw;
-        text-align: justify;
-    }
-
-    .title-opinions{
+    .title-cart{
         text-align: center;
         margin: 0;
-        padding: 0.3em;
+        /* padding: 0.3em; */
+        padding-top: 1em;
     }
 
-    .opinion-element{
-        border-bottom: 0.5px solid gray;
-        padding: 0.5em 0;
-        font-size: 1.5vw;
-    }
-
-    .author-name{
+    .name-product{
         margin: 0;
+        padding: 0.3em;
+        text-align: center;
     }
 
-    .insert_opinion{
-        padding: 0.5em 1em;
-        padding-top: 0;
+    .product{
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 50%;
-        align-items: center;
-        gap: 0.5em;
+        /* justify-content: space-around; */
+        gap: 4em;
+        padding: 0.5em;
+        border-bottom: 0.5px solid gray;
+        border-top: 0.5px solid gray;
+        font-size: 1.27vw;
+        opacity: 1;
+        transition: opacity ease 300ms;
     }
 
+    .price{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6em;
+        width: 30%;
+        /* text-align: center; */
+    }
 
-    .field-opinion{
-        resize: none;
+    .price > h1{
+        width: 40%;
+    }
+
+    .list-feature{
+        font-size: 1.2em;
+        /* text-align: left; */
+        padding: 0;
+    }
+
+    .product-description{
+        width: 22%;
+    }
+
+    #checkout{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 1em;
+        border-bottom: 0.5px solid gray;
+    }
+
+    .subtotal{
+        width: 15%;
+    }
+
+    .proceed-checkout{
         width: 100%;
     }
-
-
-    .submit-opinion{
-        width: 50%;
-    }
-
     .nav-link{
         text-decoration: none;
         color: black;
     }
-
+    
     .email-webmaster{
         text-decoration: none;
         color: black;
+    }
+
+    .delete-product{
+        font-size: 1em;
     }
 
     .nav-item{
@@ -426,16 +386,10 @@
     .nav-item > a:hover {
         color: white;
     }
-
-    #price-text::before{
+    .price>h1::before{
         content: "$";
     }
-
-    #name-product{
-        font-size: 1.4vw;
-        margin: 0;
-        padding: 0.5em;
-        padding-bottom: 0;
+    .hide{
+        opacity: 0;
     }
-
 }

@@ -4,21 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_data_client.css">
+    <link rel="stylesheet" href="../assets/css/style_data_client.css">
     <title>Datos del cliente</title>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <a href="index.html"><img class="img-logo" src="10.png" alt="LOGO"></a>
-        </div>
-        <div class="cart-icon">
-            <a href="cart.html"><img class="img-cart" src="8.png" alt="Imagen carrito"></a>
-        </div>
-        <div class="profile-icon">
-            <a href="login.html"><img class="img-profile" src="9.png" alt="Imagen perfil"></a>
-        </div>
-    </div>
+    <?php include("../views/layouts/header.php"); ?>
     <div class="address">
         <h2 class="title-address-section">Dirección de envio</h2>
         <form class="renglon">
@@ -65,6 +55,6 @@
         <a href="successful_order.html"><button class="complete_order">Completar orden</button></a> -->
     </div>
     
-    <script src="script_data_client.js"></script>
+    <script src="../assets/js/script_data_client.js"></script>
 </body>
 </html>

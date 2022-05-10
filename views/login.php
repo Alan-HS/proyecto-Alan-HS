@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="../assets/css/style_login.css">
     <title>Iniciar sesión</title>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <a href="index.html"><img class="img-logo" src="10.png" alt="LOGO"></a>
+            <a href="../index.html"><img class="img-logo" src="../10.png" alt="LOGO"></a>
         </div>
     </div>
     <div class="forms">
@@ -22,10 +22,11 @@
             <label for="contraseña_usuario">Contraseña:</label>
             <input type="password" name="contraseña_usuario" required>
             <br>
-            <a href="index_logged_in.html"><button class="iniciar-sesion" type="submit">Iniciar Sesión</button></a>
-            <a href="index_admin.html"><button class="iniciar-sesion" type="submit">Iniciar sesión como administrador</button></a>
+            <!-- Con PHP se haran las condicionales -->
+            <a href="../index.html"><button class="iniciar-sesion" type="submit">Iniciar Sesión</button></a>
+            <a href="../index.html"><button class="iniciar-sesion" type="submit">Iniciar sesión como administrador</button></a>
             <br>
-            <a href="sign_up.html"><button class="registrarse">Crear cuenta nueva</button></a>
+            <a href="../views/sign_up.php"><button class="registrarse">Crear cuenta nueva</button></a>
         </div>
     </div>
     <div class="footer">

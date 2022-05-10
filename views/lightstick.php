@@ -4,35 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_category.css">
-    <title>CD'S</title>
+    <link rel="stylesheet" href="../assets/css/style_category.css">
+    <title>Lightstick</title>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <a href="index.html"><img class="img-logo" src="10.png" alt="LOGO"></a>
-        </div>
-        <div class="cart-icon">
-            <a href="cart.html"><img class="img-cart" src="8.png" alt="Imagen carrito"></a>
-        </div>
-        <div class="profile-icon">
-            <a href="login.html"><img class="img-profile" src="9.png" alt="Imagen perfil"></a>
-        </div>
-    </div>
-    <div class="navigation-bar">
-        <div class="boton-menu">
-            <button id="boton">Menú</button>
-        </div>
-        <ul class="navigation-list">
-            <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="headsets.html">Headsets</a></li>
-            <li class="nav-item"><a class="nav-link" href="mouse_teclados.html">Mouse y teclados</a></li>
-            <li class="nav-item"><a class="nav-link" href="microfonos.html">Microfonos</a></li>
-            <li class="nav-item"><a class="nav-link" href="lightstick.html">Lightstick</a></li>
-            <li class="nav-item"><a class="nav-link" href="discos.html">CD's</a></li>
-            <li class="nav-item"><a class="nav-link" href="photocards.html">Photocards</a></li>
-        </ul>
-    </div>
+    <?php include("../views/layouts/header.php"); ?>
+    <?php include("../views/layouts/menu.php"); ?>
     <div class="content">
         <div class="featured-photo">
             <img class="img-featured" src="https://picsum.photos/550/350" alt="Producto destacado">
@@ -44,16 +21,14 @@
         <br> <br>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex veniam culpa dicta aliquid doloribus! Excepturi expedita magni est fuga voluptatem minima eveniet, cumque illum sapiente odio quas sunt, in asperiores?
         </p>
-        <div class="ad">
-            <a href="https://los-taroleros.tebex.io/"><img class="img-ad" src="14.png" alt="Anuncio de LosTaroleros"></a>
-        </div>
+        <?php include("../views/layouts/ad.php"); ?>
     </div>
     <h2 class="title-products">PRODUCTOS</h2>
     <div class="list-products">
         <form action="#" class="product">
-            <a href="g300s.html"><img class="img-product" src="https://picsum.photos/300/150" alt="Imagen producto lista"></a>
+            <a href="../views/g300s.php"><img class="img-product" src="https://picsum.photos/300/150" alt="Imagen producto lista"></a>
             <div class="product-description">
-                <a href="g300s.html"><h2 class="name-product">Titulo del producto 1</h2></a>
+                <a href="../views/g300s.php"><h2 class="name-product">Titulo del producto 1</h2></a>
                 <ul class="list-feature">
                     <li class="featureitem">Caracteristíca 1</li>
                     <li class="featureitem">Caracteristíca 2</li>
@@ -66,9 +41,9 @@
             </div>
         </form>
         <form action="#" class="product">
-            <a href="g300s.html"><img class="img-product" src="https://picsum.photos/300/150" alt="Imagen producto lista"></a>
+            <a href="../views/g300s.php"><img class="img-product" src="https://picsum.photos/300/150" alt="Imagen producto lista"></a>
             <div class="product-description">
-                <a href="g300s.html"><h2 class="name-product">Titulo del producto 2</h2></a>
+                <a href="../views/g300s.php"><h2 class="name-product">Titulo del producto 2</h2></a>
                 <ul class="list-feature">
                     <li class="featureitem">Caracteristíca 1</li>
                     <li class="featureitem">Caracteristíca 2</li>
@@ -81,9 +56,9 @@
             </div>
         </form>
         <form action="#" class="product">
-            <a href="g300s.html"><img class="img-product" src="https://picsum.photos/300/150" alt="Imagen producto lista"></a>
+            <a href="../views/g300s.php"><img class="img-product" src="https://picsum.photos/300/150" alt="Imagen producto lista"></a>
             <div class="product-description">
-                <a href="g300s.html"><h2 class="name-product">Titulo del producto 3</h2></a>
+                <a href="../views/g300s.php"><h2 class="name-product">Titulo del producto 3</h2></a>
                 <ul class="list-feature">
                     <li class="featureitem">Caracteristíca 1</li>
                     <li class="featureitem">Caracteristíca 2</li>
@@ -96,9 +71,9 @@
             </div>
         </form>
         <form action="#" class="product">
-            <a href="g300s.html"><img class="img-product" src="https://picsum.photos/300/150" alt="Imagen producto lista"></a>
+            <a href="../views/g300s.php"><img class="img-product" src="https://picsum.photos/300/150" alt="Imagen producto lista"></a>
             <div class="product-description">
-                <a href="g300s.html"><h2 class="name-product">Titulo del producto 4</h2></a>
+                <a href="../views/g300s.php"><h2 class="name-product">Titulo del producto 4</h2></a>
                 <ul class="list-feature">
                     <li class="featureitem">Caracteristíca 1</li>
                     <li class="featureitem">Caracteristíca 2</li>
@@ -113,11 +88,11 @@
     </div>
     <div class="footer">
         <p class="methods-text">Aceptamos:</p>
-        <img src="11.png" alt="VISA">
-        <img src="12.png" alt="MASTERCARD">
-        <img src="13.png" alt="AMERICAN EXPRESS">
+        <img src="../11.png" alt="VISA">
+        <img src="../12.png" alt="MASTERCARD">
+        <img src="../13.png" alt="AMERICAN EXPRESS">
         <p class="contact-information">2022 DaebakGaming <br> <a class="email-webmaster" href="mailto:alanhernandezsand@gmail.com">Webmaster:alanhernandezsand@gmail.com</a></p>
     </div>
-    <script src="script_category.js"></script>
+    <script src="../assets/js/script_category.js"></script>
 </body>
 </html>
