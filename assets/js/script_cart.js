@@ -26,7 +26,7 @@ function paintCart(){
         //Solo entra cuando hay elementos en el arreglo de tweets
         //NOTA: PARA QUE FUNCIONE EL ../ YA TENGO QUE TENER LAS IMAGENES DEFINIDAS
         html += `<div class="product" id="${list[i].id}">
-        <img class="img-product" src="../${list[i].imagen}" alt="Imagen producto lista">
+        <img class="img-product" src="${list[i].imagen}" alt="Imagen producto lista">
         <div class="product-description">
             <h2 class="name-product">${list[i].titulo}</h2>
             <ul class="list-feature">

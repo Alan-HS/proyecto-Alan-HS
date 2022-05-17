@@ -6,8 +6,13 @@ const feature2= document.getElementById("caracteristica2");
 const feature3= document.getElementById("caracteristica3");
 const price = document.getElementById("price-text");
 const image = document.getElementById("srcimg");
-
+const opinionList = document.getElementsByClassName("opinions")[0];
 const formPrice = document.getElementById("price-add");
+const textAreaEdit = document.getElementById("form-edit-texto");
+const modalText = document.getElementById("modalText");
+const idDelete = document.getElementById("form-delete-id");//AGREGO ESTO
+const modalDeleteText = document.getElementById("modalDeleteText");//AGREGO ESTO
+const idEdit = document.getElementById("form-edit-id");
 var band = 0; //Bandera para el menú
 window.addEventListener("resize",ventana);
 
@@ -15,9 +20,115 @@ document.addEventListener("DOMContentLoaded", function(){
     //Agregar evento al formulario
     boton.addEventListener("click",despliega_menu);
     formPrice.addEventListener("submit",submitProduct);
+    getOpinions();
+    let modals = document.getElementsByClassName("modal");
+
+    for(var i = 0; i < modals.length; i++) {
+        modals[i].addEventListener("click", function(e) {
+            if(e.target === this){
+                this.classList.remove("show");
+            }
+        });
+    }
 });
 
+function getOpinions() {
 
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.open("GET","../controllers/opinionsController.php",true);//Se le puso esto
+
+    xhttp.onreadystatechange = function(){
+        if(this.readyState === 4){
+            if(this.status === 200){
+                console.log(this.responseText);
+                let list = JSON.parse(this.responseText);
+                paintOpinions(list);
+                // console.log(list);
+            }
+            else{
+                console.log("Error");
+            }
+        }
+    };
+
+    xhttp.send();
+
+    return [];
+}
+
+function paintOpinions(list) {
+    // let list = getTweets();
+
+    let html = '';
+
+    for(var i = 0; i < list.length; i++) {
+        html += 
+            `<div class="opinion-element" id="${list[i].id}">
+            <h4 class="author-name">ALAN EDGARDO</h4>
+            <p class="text-opinion">${list[i].text}</p>
+            <div class="options">
+                    <button class="btn-option" onclick="editOpinion(${list[i].id})">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn-option" onclick="deleteOpinion(${list[i].id})">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+        </div>`;
+    }
+
+    opinionList.innerHTML = html;
+
+}
+
+function editOpinion(id) {
+    // console.log(id);
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.open("GET","../controllers/opinionsController.php?id=" + id,true);//Se le cambia el nombre dependiendo de la categoria
+
+    xhttp.onreadystatechange = function(){
+        if(this.readyState === 4){
+            if(this.status === 200){
+                // console.log(this.responseText);
+                let opinion = JSON.parse(this.responseText);
+                idEdit.value = opinion.id;
+                textAreaEdit.value = opinion.text;
+
+                // btnSaveEdit.setAttribute("onclick", "saveEdit(" + product.id + ")"); ESTO ES POR AJAX
+                modalText.classList.add("show");
+                // console.log(list);
+            }
+            else{
+                console.log("Error");
+            }
+        }
+    };
+
+    xhttp.send();
+}
+
+function deleteOpinion(id) {
+    // let list = getTweets();
+
+    // list = list.filter(i => i.id !== id);
+
+    // localStorage.setItem(keyList, JSON.stringify(list));
+
+    // let tweet = document.getElementById(id);
+
+    // tweet.className += ' hide';
+
+    // setTimeout(() => {
+    //     tweet.remove();
+    // }, 300);
+    idDelete.value = id;
+    modalDeleteText.classList.add("show");//AGREGO ESTO
+
+}
+
+//FUNCIONES LOCAL STORAGE -----------------------------
 function submitProduct(e){
     e.preventDefault();
     e.stopPropagation();

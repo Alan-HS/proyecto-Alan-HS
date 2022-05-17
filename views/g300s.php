@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d5ef93086f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/style_product.css">
     <title>G300s</title>
 </head>
@@ -27,7 +28,7 @@
             <span id="caracteristica2" style="display: none;">Caracteristica 2</span>
             <span id="caracteristica3" style="display: none;">Caracteristica 3</span>
             <!-- Imagen que va a llevar -->
-            <span id="srcimg" style="display: none;">2.png</span>
+            <span id="srcimg" style="display: none;">../2.png</span>
 
             <form action="#" id="price-add">
                 <span id="price-text">1000.00</span>
@@ -38,21 +39,21 @@
     </div>
     <h2 class="title-opinions">OPINIONES</h2>
     <div class="opinions">
-        <div class="opinion-element">
+        <!-- <div class="opinion-element">
             <h4 class="author-name">ALAN EDGARDO</h4>
             <p class="text-opinion"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quod repellendus asperiores id, consequatur similique sit laudantium, numquam nobis doloremque molestiae consectetur vitae culpa minus sint dolorem, esse perspiciatis illo.</p>
-            <!-- <button class="delete-opinion">Eliminar opinión como administrador</button> -->
         </div>
         <div class="opinion-element">
             <h4 class="author-name">ALAN EDGARDO</h4>
             <p class="text-opinion"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quod repellendus asperiores id, consequatur similique sit laudantium, numquam nobis doloremque molestiae consectetur vitae culpa minus sint dolorem, esse perspiciatis illo.</p>
-            <!-- <button class="delete-opinion">Eliminar opinión como administrador</button> -->
-        </div>
+        </div> -->
     </div>
-    <div class="insert_opinion">
-        <textarea class="field-opinion" name="comment" cols="80" rows="5" placeholder="Escribe tu opinión" disabled></textarea>
-        <button class="submit-opinion">PUBLICAR OPINIÓN</button>
-    </div>
+    <form class="insert_opinion" action="../controllers/opinionsController.php" method="POST" id="form-opinion" class="flow">
+        <input type="hidden" name="_method" value="POST">
+        <label for="text">Escribe tu opinión:</label>
+        <textarea class="field-opinion" name="text" cols="80" rows="5" ></textarea>
+        <input type="submit" value="Agregar opinión" class="submit-opinion">
+    </form>
     <div class="footer">
         <p class="methods-text">Aceptamos:</p>
         <img src="../11.png" alt="VISA">
@@ -60,6 +61,8 @@
         <img src="../13.png" alt="AMERICAN EXPRESS">
         <p class="contact-information">2022 DaebakGaming <br> <a class="email-webmaster" href="mailto:alanhernandezsand@gmail.com">Webmaster:alanhernandezsand@gmail.com</a></p>
     </div>
+    
+    <?php include("../views/layouts/modal_opinions.php"); include("../views/layouts/modal_delete_opinions.php");?>
     <script src="../assets/js/script_product.js"></script>
 </body>
 </html>

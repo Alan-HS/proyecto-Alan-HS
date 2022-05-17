@@ -209,6 +209,18 @@
     .price>h1::before{
         content: "$";
     }
+
+    .form-container{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+
+    textarea{
+        resize: none;
+    }
 }
 
 
@@ -427,4 +439,71 @@
         content: "$";
     }
 
+    .form-container{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+
+    textarea{
+        resize: none;
+    }
+
+}
+
+.modal {
+    display: none;
+    z-index: 1050;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-x: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: display ease 1000ms;
+    -webkit-transition: display ease 1000ms;
+}
+
+.modal-dialog {
+    width: 500px;
+    margin-inline: auto;
+    margin-block: 2em;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity ease 1000ms;
+    -webkit-transition: opacity ease 1000ms;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    padding: 1em;
+}
+
+.modal-header {
+    border-bottom: 1px solid lightgray;
+}
+
+.modal-footer {
+    border-top: 1px solid lightgray;
+}
+
+.modal-header > * {
+    margin: 0;
+}
+
+.show {
+    display: block;
 }
