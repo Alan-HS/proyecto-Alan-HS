@@ -6,32 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d5ef93086f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/style_product.css">
-    <title>G300s</title>
+    <title>G300s</title> <!-- Cambiar esto a cada una -->
 </head>
 <body>
     <?php include("../views/layouts/header.php"); ?>
     <?php include("../views/layouts/menu.php"); ?>
     <div class="content">
         <div class="product-photo">
-            <img class="img-producto" src="https://picsum.photos/550/350" alt="Producto">
+            <img class="img-producto" src="../images/g300s_2.png" alt="Producto"> <!-- Cambiar esto a cada una -->
         </div>
         <div class="product-info">
-            <h1 id="name-product">G300s</h1>
-            <p class="product-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, quis aperiam quos, magnam totam aut quia explicabo minus laborum perferendis expedita vero! Quia earum, debitis impedit atque maxime vero ipsum?
-                <br> <br>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione nulla distinctio eaque doloremque aut eius neque eligendi sapiente dicta, cupiditate, quia beatae ullam pariatur in amet aliquid tempora! Possimus, vel!
+            <h1 id="name-product">G300s</h1> <!-- Cambiar esto a cada una -->
+            <p class="product-text"> <!-- Cambiar esto a cada una -->
+            Con el nuevo mouse de Logitech podrás lograr cosas increíbles gracias a sus 9 botones programables, además de poder configurar la iluminación a través de perfiles para que se adapte mejor a tu día a día.
             </p>
             <!-- Esto es para llevar los datos al carrito de compras, por eso se considera con display none -->
-            <!-- Caracteristicas -->
-            <span id="caracteristica1" style="display: none;">Caracteristica XD</span>
-            <span id="caracteristica2" style="display: none;">Caracteristica 2</span>
-            <span id="caracteristica3" style="display: none;">Caracteristica 3</span>
-            <!-- Imagen que va a llevar -->
-            <span id="srcimg" style="display: none;">../2.png</span>
+            <!-- Caracteristicas --> <!-- Cambiar esto a cada una -->
+            <span id="caracteristica1" style="display: none;">Diseño ambidiestro</span>
+            <span id="caracteristica2" style="display: none;">Memoria integrada para 3 perfiles</span>
+            <span id="caracteristica3" style="display: none;">9 botones programables</span>
+            <!-- Imagen que va a llevar --> <!-- Cambiar esto a cada una con el _1-->
+            <span id="srcimg" style="display: none;">g300s_1.png</span>
 
             <form action="#" id="price-add">
-                <span id="price-text">1000.00</span>
+                <span id="price-text">200</span> <!-- Cambiar esto a cada una -->
                 <button class="add-to-cart">AGREGAR AL CARRITO</button>
             </form>
         </div>
@@ -56,9 +54,9 @@
     </form>
     <div class="footer">
         <p class="methods-text">Aceptamos:</p>
-        <img src="../11.png" alt="VISA">
-        <img src="../12.png" alt="MASTERCARD">
-        <img src="../13.png" alt="AMERICAN EXPRESS">
+        <img src="../images/11.png" alt="VISA">
+        <img src="../images/12.png" alt="MASTERCARD">
+        <img src="../images/13.png" alt="AMERICAN EXPRESS">
         <p class="contact-information">2022 DaebakGaming <br> <a class="email-webmaster" href="mailto:alanhernandezsand@gmail.com">Webmaster:alanhernandezsand@gmail.com</a></p>
     </div>
     

@@ -10,7 +10,7 @@
 <body>
     <div class="header">
         <div class="logo">
-            <a href="../index.html"><img class="img-logo" src="../10.png" alt="LOGO"></a>
+            <a href="../index.html"><img class="img-logo" src="../images/10.png" alt="LOGO"></a>
         </div>
     </div>
     <div class="forms">

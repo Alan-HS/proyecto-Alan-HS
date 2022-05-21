@@ -11,7 +11,7 @@
     <?php include("../views/layouts/header.php"); ?>
     <div class="content">
         <div class="thanks">
-            <img src="https://picsum.photos/60/60" alt="Imagen palomita">
+            <img src="../images/check.png" alt="Imagen palomita">
             <h2 class="title-thanks">Gracias por tu compra!</h2>
         </div>
         <div class="text_information">

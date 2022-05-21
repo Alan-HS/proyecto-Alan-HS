@@ -13,14 +13,10 @@
     <?php include("../views/layouts/menu.php"); ?>
     <div class="content">
         <div class="featured-photo">
-            <img class="img-featured" src="https://picsum.photos/550/350" alt="Producto destacado">
+            <img class="img-featured" src="../images/g535_2.png" alt="Producto destacado">
         </div>
         <p class="featured-text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, quis aperiam quos, magnam totam aut quia explicabo minus laborum perferendis expedita vero! Quia earum, debitis impedit atque maxime vero ipsum?
-        <br> <br>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione nulla distinctio eaque doloremque aut eius neque eligendi sapiente dicta, cupiditate, quia beatae ullam pariatur in amet aliquid tempora! Possimus, vel!
-        <br> <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex veniam culpa dicta aliquid doloribus! Excepturi expedita magni est fuga voluptatem minima eveniet, cumque illum sapiente odio quas sunt, in asperiores?
+        En la categoría de Headsets encontraras una gran variedad de accesorios que te darán mucha ventaja al jugar videojuegos o para poder sacarle máximo provecho al trabajo del día a día. <br> El producto destacado de esta semana es nada más y nada menos que el headset Logitech G535 gracias a todo el poder que tiene para poder escuchar muy bien la música o para escuchar a nuestros enemigos en los videojuegos.
         </p>
         <?php include("../views/layouts/ad.php"); ?>
     </div>
@@ -116,9 +112,9 @@
 
     <div class="footer">
         <p class="methods-text">Aceptamos:</p>
-        <img src="../11.png" alt="VISA">
-        <img src="../12.png" alt="MASTERCARD">
-        <img src="../13.png" alt="AMERICAN EXPRESS">
+        <img src="../images/11.png" alt="VISA">
+        <img src="../images/12.png" alt="MASTERCARD">
+        <img src="../images/13.png" alt="AMERICAN EXPRESS">
         <p class="contact-information">2022 DaebakGaming <br> <a class="email-webmaster" href="mailto:alanhernandezsand@gmail.com">Webmaster:alanhernandezsand@gmail.com</a></p>
     </div>
     

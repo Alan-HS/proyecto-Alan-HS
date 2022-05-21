@@ -13,14 +13,10 @@
     <?php include("../views/layouts/menu.php"); ?>
     <div class="content">
         <div class="featured-photo">
-            <img class="img-featured" src="https://picsum.photos/550/350" alt="Producto destacado">
+            <img class="img-featured" src="../images/moonbyul_2.png" alt="Producto destacado">
         </div>
         <p class="featured-text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, quis aperiam quos, magnam totam aut quia explicabo minus laborum perferendis expedita vero! Quia earum, debitis impedit atque maxime vero ipsum?
-        <br> <br>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione nulla distinctio eaque doloremque aut eius neque eligendi sapiente dicta, cupiditate, quia beatae ullam pariatur in amet aliquid tempora! Possimus, vel!
-        <br> <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex veniam culpa dicta aliquid doloribus! Excepturi expedita magni est fuga voluptatem minima eveniet, cumque illum sapiente odio quas sunt, in asperiores?
+        En la categoría de Photocards encontraras una gran variedad de fotografías que te ofrecerán una increíble vista al observar los detalles que tienen las photocards, así como el material de estas mismas. <br> El producto destacado de esta semana es nada más y nada menos que la photocard de Moonbyul gracias al gran éxito que tuvo en los últimos días con su nuevo álbum 6quence y los fanáticos estuvieron ansiosos de esperar su regreso.
         </p>
         <?php include("../views/layouts/ad.php"); ?>
     </div>
@@ -57,9 +53,9 @@
 
     <div class="footer">
         <p class="methods-text">Aceptamos:</p>
-        <img src="../11.png" alt="VISA">
-        <img src="../12.png" alt="MASTERCARD">
-        <img src="../13.png" alt="AMERICAN EXPRESS">
+        <img src="../images/11.png" alt="VISA">
+        <img src="../images/12.png" alt="MASTERCARD">
+        <img src="../images/13.png" alt="AMERICAN EXPRESS">
         <p class="contact-information">2022 DaebakGaming <br> <a class="email-webmaster" href="mailto:alanhernandezsand@gmail.com">Webmaster:alanhernandezsand@gmail.com</a></p>
     </div>
     
