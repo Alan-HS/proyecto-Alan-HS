@@ -221,6 +221,18 @@
     textarea{
         resize: none;
     }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
+        width: 100%;
+        border-radius: 8px;
+    }
 }
 
 
@@ -451,6 +463,17 @@
         resize: none;
     }
 
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
+        width: 100%;
+        border-radius: 8px;
+    }
 }
 
 .modal {

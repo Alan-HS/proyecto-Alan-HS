@@ -10,24 +10,24 @@
 <body>
     <div class="header">
         <div class="logo">
-            <a href="../index.html"><img class="img-logo" src="../images/10.png" alt="LOGO"></a>
+            <a href="../index.php"><img class="img-logo" src="../images/10.png" alt="LOGO"></a>
         </div>
     </div>
     <div class="forms">
         <h1>Inicio de sesión</h1>
-        <div class="form-container">
-            <label for="nombre_usuario">Email:</label>
+        <form action="../controllers/accessController.php" method="POST" class="form-container">
+            <input type="hidden" name="_method" value="POST">
+            <label for="nombre_usuario">Usuario:</label>
             <input type="text" name="nombre_usuario" required>
             <br>
-            <label for="contraseña_usuario">Contraseña:</label>
-            <input type="password" name="contraseña_usuario" required>
+            <label for="password_usuario">Contraseña:</label>
+            <input type="password" name="password_usuario" required>
             <br>
             <!-- Con PHP se haran las condicionales -->
-            <a href="../index.html"><button class="iniciar-sesion" type="submit">Iniciar Sesión</button></a>
-            <a href="../index.html"><button class="iniciar-sesion" type="submit">Iniciar sesión como administrador</button></a>
-            <br>
-            <a href="../views/sign_up.php"><button class="registrarse">Crear cuenta nueva</button></a>
-        </div>
+            <input class="iniciar-sesion" type="submit" value="Iniciar Sesión"></button>
+            <!-- <a href="../index.html"><button class="iniciar-sesion" type="submit">Iniciar sesión como administrador</button></a> -->
+        </form>
+        <a href="../views/sign_up.php"><button class="registrarse">Crear cuenta nueva</button></a>
     </div>
     <div class="footer">
         <p class="contact-information">2022 DaebakGaming <br> <a class="email-webmaster" href="mailto:alanhernandezsand@gmail.com">Webmaster:alanhernandezsand@gmail.com</a></p>

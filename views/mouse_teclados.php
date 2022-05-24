@@ -25,31 +25,35 @@
         
     </div>
     <!-- Formulario para base de datos -->
-    <form action="../controllers/mouse_tecladosController.php" method="POST" id="form-product" class="form-container">
-                    <!-- Se le puso text por el nombre de la columna de la db -->
-                    <input type="hidden" name="_method" value="POST">
-                    <label for="titulo">Titulo:</label>
-                    <textarea name="titulo"></textarea>
-                    <input type="hidden" name="_method" value="POST">
-                    <label for="feature1">Caracteristíca 1:</label>
-                    <textarea name="feature1"></textarea>
-                    <input type="hidden" name="_method" value="POST">
-                    <label for="feature2">Caracteristíca 2:</label>
-                    <textarea name="feature2"></textarea>
-                    <input type="hidden" name="_method" value="POST">
-                    <label for="feature3">Caracteristíca 3:</label>
-                    <textarea name="feature3"></textarea>
-                    <input type="hidden" name="_method" value="POST">
-                    <label for="price">Precio:</label>
-                    <textarea name="price"></textarea>
-                    <input type="hidden" name="_method" value="POST">
-                    <label for="image">Imagen:</label>
-                    <textarea name="image"></textarea>
-                    <input type="hidden" name="_method" value="POST">
-                    <label for="href">Href:</label>
-                    <textarea name="href"></textarea>
-                    <input type="submit" value="Agregar">
-    </form>
+    <?php
+        // session_start();
+        if($_SESSION["type"] !== "normal") {//Si no es normal
+            echo  "<form action=\"../controllers/mouse_tecladosController.php\" method=\"POST\" id=\"form-product\" class=\"form-container\">
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            <label for=\"titulo\">Titulo:</label>
+            <textarea name=\"titulo\"></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            <label for=\"feature1\">Caracteristíca 1:</label>
+            <textarea name=\"feature1\"></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            <label for=\"feature2\">Caracteristíca 2:</label>
+            <textarea name=\"feature2\"></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            <label for=\"feature3\">Caracteristíca 3:</label>
+            <textarea name=\"feature3\"></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            <label for=\"price\">Precio:</label>
+            <textarea name=\"price\"></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            <label for=\"image\">Imagen:</label>
+            <textarea name=\"image\"></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            <label for=\"href\">Href:</label>
+            <textarea name=\"href\"></textarea>
+            <input type=\"submit\" value=\"Agregar\">
+</form>";                
+        }
+    ?>
 
     <div class="footer">
         <p class="methods-text">Aceptamos:</p>
@@ -60,6 +64,14 @@
     </div>
     
     <?php include("../views/layouts/modal_mouse_teclados.php"); include("../views/layouts/modal_delete_mouse_teclados.php");?>
-    <script src="../assets/js/script_mouse_teclados.js"></script>
+    
+    <?php
+        if($_SESSION["type"] !== "normal"){
+            echo "<script src=\"../assets/js/script_mouse_teclados.js\"></script>";//Admin
+        }
+        else{
+            echo "<script src=\"../assets/js/script_mouse_teclados_noadmin.js\"></script>";//No admin
+        }
+    ?>
 </body>
 </html>
