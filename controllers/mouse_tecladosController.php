@@ -117,7 +117,7 @@ function postProduct($titulo,$feature1,$feature2,$feature3,$price,$image,$href,$
         $query->execute();
 
         if($query->rowCount() === 0){
-            echo "Error en la inserción";
+            redirectError("404: Error en la inserción");
         }
         else{
             // echo "Registro guardado";
@@ -152,7 +152,7 @@ function putProduct($id,$titulo,$feature1,$feature2,$feature3,$price,$image,$hre
         $query->execute();
 
         if($query->rowCount() === 0){
-            echo "Error en la actualización";
+            redirectError("404: Error en la actualización");
         }
         else{
             // echo "Registro guardado";
@@ -180,7 +180,7 @@ function deleteProduct($id,$redirect){
         $query->execute();
 
         if($query->rowCount() === 0){
-            echo "Error en la eliminación";
+            redirectError("404: Error en la eliminación");
         }
         else{
             // echo "Registro guardado";
@@ -196,5 +196,13 @@ function deleteProduct($id,$redirect){
     catch(PDOException $e){
         echo $e;
     }
+}
+
+function redirectError($error){
+
+    $url = "Location: http://localhost/Proyecto/views/error.php?error=" . $error;
+    
+    header($url);
+            
 }
 ?>

@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $query->execute();
 
         if($query->rowCount() === 0) {
-            echo "Error en la inserción";
+            redirectError("404: Error en la inserción");
         }
         else {
                 header('Location: http://localhost/Proyecto/views/login.php');
@@ -38,6 +38,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     catch(PDOException $e) {
         echo $e;
     }
+
+}
+
+function redirectError($error){
+
+    $url = "Location: http://localhost/Proyecto/views/error.php?error=" . $error;
+    
+    header($url);
+            
 }
 
 ?>

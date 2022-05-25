@@ -69,6 +69,12 @@
     .iniciar-sesion{
         width: 100%;
     }
+
+    .error{
+        text-align: center;
+        background-color: rosybrown;
+        padding: 1em;
+    }
 }
 
 @media (min-width: 780px){/*Esto si se ve en una computadora*/
@@ -137,6 +143,12 @@
 
     .iniciar-sesion{
         width: 100%;
+    }
+    
+    .error{
+        text-align: center;
+        background-color: rosybrown;
+        padding: 1em;
     }
 
 }

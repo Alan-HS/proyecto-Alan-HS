@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $query->execute();
 
             if ($query->rowCount() === 0) {
-                echo "Usuario no encontrado";
+                redirectError("404: Usuario no encontrado");
                 // header('Location: http://localhost/twitter/');
                 exit();
             }
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
 
             if (!password_verify($password, $user->getPassword())) {
-                echo "Contraseña inválida";
+                redirectError("404: Contraseña inválida");
                 exit();
             }
 
@@ -63,6 +63,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         exit();
     }
+}
+
+function redirectError($error){
+
+    $url = "Location: http://localhost/Proyecto/views/error.php?error=" . $error;
+    
+    header($url);
+            
 }
 
 ?>

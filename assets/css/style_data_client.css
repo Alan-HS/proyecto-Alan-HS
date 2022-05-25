@@ -143,6 +143,18 @@
     #buttonpayment{
         padding-left: 1.4em;
     }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
+        width: 100%;
+        border-radius: 8px;
+    }
     
 }
 
@@ -306,5 +318,17 @@
 
     #buttonpayment{
         padding-left: 1.4em;
+    }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
+        width: 100%;
+        border-radius: 8px;
     }
 }

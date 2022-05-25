@@ -5,12 +5,14 @@
         private $_id;
         private $_text;
         private $_active;
+        private $_name;
 
         //Constructor de php
-        public function __construct($id, $text, $active){
+        public function __construct($id, $text, $active,$name){
             $this->setId($id);
             $this->setText($text);
             $this->setActive($active);
+            $this->setName($name);
         }
 
 
@@ -38,12 +40,21 @@
             $this->_active = $active;
         }
 
+        public function getName(){
+            return $this->_name;//Como es variable normal es this->
+        }
+
+        public function setName($name){
+            $this->_name = $name;
+        }
+
         public function getArray(){
             $array = array();
     
             $array["id"] = $this->getId();
             $array["text"] = $this->getText();           
             $array["active"] = $this->getActive();
+            $array["name"] = $this->getName();
     
             return $array;
         }

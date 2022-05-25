@@ -65,7 +65,7 @@ function paintOpinions(list) {
     for(var i = 0; i < list.length; i++) {
         html += 
             `<div class="opinion-element" id="${list[i].id}">
-            <h4 class="author-name">ALAN EDGARDO</h4>
+            <h4 class="author-name">${list[i].name}</h4>
             <p class="text-opinion">${list[i].text}</p>
             <div class="options">
                     <button class="btn-option" onclick="editOpinion(${list[i].id})">

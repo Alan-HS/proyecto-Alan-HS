@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     
     
             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-                $opinion = new Opinion($row['id'],$row['text'],$row['active']);
+                $opinion = new Opinion($row['id'],$row['text'],$row['active'],$row['name']);
     
             }
             // var_dump($tweets);
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     
             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 
-                $opinion = new Opinion($row['id'],$row['text'],$row['active']);
+                $opinion = new Opinion($row['id'],$row['text'],$row['active'],$row['name']);
     
                 $opinions[] = $opinion->getArray();//Push
             }
@@ -68,7 +68,9 @@ else if($_SERVER["REQUEST_METHOD"] === "POST"){
         //Utilizar el arreglo $_POST
         if($_POST["_method"] === "POST"){
             //Registro nuevo
-            postOpinion($_POST["text"],true);
+            session_start();
+            $name = $_SESSION["username"];
+            postOpinion($_POST["text"],$name,true);
         }
         else if($_POST["_method"] === "PUT"){
             putOpinion($_POST["id"],$_POST["text"],true);
@@ -99,19 +101,19 @@ else if($_SERVER["REQUEST_METHOD"] === "POST"){
 }
 // var_dump($_SERVER);
 
-function postOpinion($text,$redirect){
+function postOpinion($text,$name,$redirect){
     global $connection;
 
     // $timestamp = date("Y-m-d H:i:s", $_SERVER['REQUEST_TIME']);
 
-
     try{
-        $query = $connection->prepare('INSERT INTO opinions VALUES(NULL, :text, 1)');//Se le cambia el nombre a cds, photocards, etc dependiendo
+        $query = $connection->prepare('INSERT INTO opinions VALUES(NULL, :text, 1, :name)');//Se le cambia el nombre a cds, photocards, etc dependiendo
         $query->bindParam(':text', $text, PDO::PARAM_STR);
+        $query->bindParam(':name', $name, PDO::PARAM_STR);
         $query->execute();
 
         if($query->rowCount() === 0){
-            echo "Error en la inserción";
+            redirectError("404: Error en la inserción");
         }
         else{
             // echo "Registro guardado";
@@ -140,7 +142,7 @@ function putOpinion($id,$text,$redirect){
         $query->execute();
 
         if($query->rowCount() === 0){
-            echo "Error en la actualización";
+            redirectError("404: Error en la actualización");
         }
         else{
             // echo "Registro guardado";
@@ -168,7 +170,7 @@ function deleteOpinion($id,$redirect){
         $query->execute();
 
         if($query->rowCount() === 0){
-            echo "Error en la eliminación";
+            redirectError("404: Error en la eliminación");
         }
         else{
             // echo "Registro guardado";
@@ -185,4 +187,13 @@ function deleteOpinion($id,$redirect){
         echo $e;
     }
 }
+
+function redirectError($error){
+
+    $url = "Location: http://localhost/Proyecto/views/error.php?error=" . $error;
+    
+    header($url);
+            
+}
+
 ?>

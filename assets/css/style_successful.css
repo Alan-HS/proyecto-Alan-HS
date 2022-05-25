@@ -81,6 +81,18 @@
     .about_client{
         padding: 0 3em;
     }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
+        width: 100%;
+        border-radius: 8px;
+    }
 }
 
 
@@ -163,6 +175,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .logout-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+    .img-logout{
+        width: 100%;
+        border-radius: 8px;
     }
 
 }
