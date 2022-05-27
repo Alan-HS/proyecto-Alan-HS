@@ -118,7 +118,7 @@ function postOpinion($text,$name,$redirect){
         else{
             // echo "Registro guardado";
             if($redirect){
-                header('Location: http://localhost/Proyecto/index.php');//Aqui se le cambia la ruta a la página de productos actual
+                header('Location: ' . $_SERVER['HTTP_REFERER']);//Aqui se le cambia la ruta a la página de productos actual
             }
             else{
                 echo "Registro guardado";
@@ -147,7 +147,7 @@ function putOpinion($id,$text,$redirect){
         else{
             // echo "Registro guardado";
             if($redirect){
-                header('Location: http://localhost/Proyecto/index.php');
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
             }
             else{
                 echo "Registro guardado";
@@ -175,7 +175,7 @@ function deleteOpinion($id,$redirect){
         else{
             // echo "Registro guardado";
             if($redirect){
-                header('Location: http://localhost/Proyecto/index.php');
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
             }
             else{
                 echo "Registro eliminado";

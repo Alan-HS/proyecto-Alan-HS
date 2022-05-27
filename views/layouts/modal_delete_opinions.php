@@ -9,7 +9,7 @@
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="id" value="" id="form-delete-id">
                     <p>¿Seguro que desea eliminar esta opinión?</p>
-                    <input type="submit" value="Aceptar">
+                    <input type="submit" value="Aceptar" onclick="window.localStorage.clear();">
                 </form>
             </div>
         </div>

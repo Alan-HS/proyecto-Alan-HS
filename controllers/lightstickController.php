@@ -66,9 +66,17 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
 else if($_SERVER["REQUEST_METHOD"] === "POST"){
     if(array_key_exists("titulo",$_POST)){//Si se envia por formulario
         //Utilizar el arreglo $_POST
+        $photo = "";
+        if (sizeof($_FILES) > 0) {
+            $tmp_name = $_FILES["image"]["tmp_name"];
+    
+            $photo = file_get_contents($tmp_name);
+            // var_dump($tmp_name);
+            // echo "Hola";
+        }
         if($_POST["_method"] === "POST"){
             //Registro nuevo
-            postProduct($_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],$_POST["image"],$_POST["href"],true);
+            postProduct($_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],$photo,"g300s.php",true);
         }
         else if($_POST["_method"] === "PUT"){
             putProduct($_POST["id"],$_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],$_POST["image"],$_POST["href"],true);

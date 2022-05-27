@@ -79,7 +79,7 @@
         }
 
         public function setImage($image){
-            $this->_image = $image;
+            $this->_image = base64_encode($image);
         }
 
         public function getHref(){

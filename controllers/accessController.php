@@ -46,7 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["id"] = $user->getId();
             $_SESSION["username"] = $user->getUsername();
             $_SESSION["type"] = $user->getType();
-
+            echo "<script>
+                window.localStorage.clear();
+                </script>";
             header('Location: http://localhost/Proyecto/index.php');
             exit();
         }
@@ -56,7 +58,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     else if($_POST["_method"] === "DELETE") {
         session_start();
-
+        echo "<script>
+        window.localStorage.clear();
+        </script>";
         session_destroy();
 
         header('Location: http://localhost/Proyecto/index.php');

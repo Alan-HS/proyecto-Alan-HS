@@ -74,7 +74,7 @@ function paintProducts(list) {
     for(var i = 0; i < list.length; i++) {
         html += 
             `<form class="product" id="${list[i].id}">
-            <a href="../views/${list[i].href}"><img class="img-product" src="../images/${list[i].image}" alt="Imagen producto lista"></a>
+            <a href="../views/${list[i].href}"><img class="img-product" src="data:image/jpg;base64,${list[i].image}" alt="Imagen producto lista"></a>
             <div class="product-description">
                 <a href="../views/${list[i].href}"><h2 class="name-product">${list[i].titulo}</h2></a>
                 <ul class="list-feature">

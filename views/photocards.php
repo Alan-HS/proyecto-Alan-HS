@@ -28,28 +28,25 @@
     <?php
         // session_start();
         if($_SESSION["type"] !== "normal") {//Si no es normal
-            echo  "<form action=\"../controllers/photocardsController.php\" method=\"POST\" id=\"form-product\" class=\"form-container\">
+            echo  "<form action=\"../controllers/photocardsController.php\" method=\"POST\" id=\"form-product\" class=\"form-container\" enctype=\"multipart/form-data\">
             <input type=\"hidden\" name=\"_method\" value=\"POST\">
             <label for=\"titulo\">Titulo:</label>
-            <textarea name=\"titulo\"></textarea>
+            <textarea name=\"titulo\" required></textarea>
             <input type=\"hidden\" name=\"_method\" value=\"POST\">
             <label for=\"feature1\">Caracteristíca 1:</label>
-            <textarea name=\"feature1\"></textarea>
+            <textarea name=\"feature1\" required></textarea>
             <input type=\"hidden\" name=\"_method\" value=\"POST\">
             <label for=\"feature2\">Caracteristíca 2:</label>
-            <textarea name=\"feature2\"></textarea>
+            <textarea name=\"feature2\" required></textarea>
             <input type=\"hidden\" name=\"_method\" value=\"POST\">
             <label for=\"feature3\">Caracteristíca 3:</label>
-            <textarea name=\"feature3\"></textarea>
+            <textarea name=\"feature3\" required></textarea>
             <input type=\"hidden\" name=\"_method\" value=\"POST\">
             <label for=\"price\">Precio:</label>
-            <textarea name=\"price\"></textarea>
+            <textarea name=\"price\" required></textarea>
             <input type=\"hidden\" name=\"_method\" value=\"POST\">
             <label for=\"image\">Imagen:</label>
-            <textarea name=\"image\"></textarea>
-            <input type=\"hidden\" name=\"_method\" value=\"POST\">
-            <label for=\"href\">Href:</label>
-            <textarea name=\"href\"></textarea>
+            <input type=\"file\" name=\"image\" required>
             <input type=\"submit\" value=\"Agregar\">
 </form>";                
         }

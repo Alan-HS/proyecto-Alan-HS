@@ -49,7 +49,7 @@
     <form class="insert_opinion" action="../controllers/opinionsController.php" method="POST" id="form-opinion" class="flow">
         <input type="hidden" name="_method" value="POST">
         <label for="text">Escribe tu opinión:</label>
-        <textarea class="field-opinion" name="text" cols="80" rows="5" ></textarea>
+        <textarea class="field-opinion" name="text" cols="80" rows="5" required></textarea>
         <input type="submit" value="Agregar opinión" class="submit-opinion">
     </form>
     <div class="footer">
@@ -60,7 +60,10 @@
         <p class="contact-information">2022 DaebakGaming <br> <a class="email-webmaster" href="mailto:alanhernandezsand@gmail.com">Webmaster:alanhernandezsand@gmail.com</a></p>
     </div>
     
-    <?php include("../views/layouts/modal_opinions.php"); include("../views/layouts/modal_delete_opinions.php");?>
-    <script src="../assets/js/script_product.js"></script>
+    <?php 
+    include("../views/layouts/modal_opinions.php"); 
+    include("../views/layouts/modal_delete_opinions.php");
+    include("../assets/js/script_product.php");
+    ?>
 </body>
 </html>
