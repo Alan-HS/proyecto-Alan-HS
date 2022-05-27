@@ -92,6 +92,22 @@ function paintOpinions(list) {
         }
         }
         else{
+            if(name.username === list[i].name){
+            html += 
+            `<div class="opinion-element" id="${list[i].id}">
+            <h4 class="author-name">${list[i].name}</h4>
+            <p class="text-opinion">${list[i].text}</p>
+            <div class="options">
+                    <button class="btn-option" onclick="editOpinion(${list[i].id})">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn-option" onclick="deleteOpinion(${list[i].id})">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+        </div>`;
+        }
+        else{
             html += 
             `<div class="opinion-element" id="${list[i].id}">
             <h4 class="author-name">${list[i].name}</h4>
@@ -102,6 +118,8 @@ function paintOpinions(list) {
                     </button>
                 </div>
         </div>`;
+        }
+            
         }
         
         

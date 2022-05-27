@@ -32,5 +32,6 @@
     <div class="footer">
         <p class="contact-information">2022 DaebakGaming <br> <a class="email-webmaster" href="mailto:alanhernandezsand@gmail.com">Webmaster:alanhernandezsand@gmail.com</a></p>
     </div>
+    <script>localStorage.clear();</script>
 </body>
 </html>
