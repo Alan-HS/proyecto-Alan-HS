@@ -24,16 +24,18 @@ document.addEventListener("DOMContentLoaded", function(){
 function paintPrice(){
     price = JSON.parse(localStorage.getItem(keyPrice));
     let html = '';
-    html += `<h2 class="title-summary-section">
+    html += `<input type="hidden" name="_method" value="POST">
+        <h2 class="title-summary-section">
             Resumen del pedido
         </h2>
         <div class="sub_container_summary">
             <div class="renglon_summary">
                 <span>Total</span>
                 <span>$${price}</span>
+                <input type="hidden" name="price" value="${price}">
             </div>
         </div>
-        <a href="../views/successful_order.php"><button class="complete_order">Completar orden</button></a>`;
+        <input class="complete_order" type="submit" value="Completar orden">`;
     order_summ.innerHTML = html;
 }
 

@@ -42,7 +42,7 @@
     <!-- <form action="#" id="buttonpayment">
         <button>Guardar información de pago</button>
     </form> -->
-    <div class="order_summary">
+    <form action="../controllers/compraController.php" class="order_summary" method="POST">
         <!-- <h2 class="title-summary-section">
             Resumen del pedido
         </h2>
@@ -57,7 +57,7 @@
             </div>
         </div>
         <a href="successful_order.html"><button class="complete_order">Completar orden</button></a> -->
-    </div>
+    </form>
     
     <script src="../assets/js/script_data_client.js"></script>
 </body>

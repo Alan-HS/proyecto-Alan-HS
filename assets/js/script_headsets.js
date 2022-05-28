@@ -206,6 +206,7 @@ function submitProduct(e){
     // let list = [ tweet ];
 
     localStorage.setItem(cartList,JSON.stringify(list));
+    alert("Producto agregado al carrito!!!");
     //paintTweet();
     // console.log("Enviando formulario");
 }

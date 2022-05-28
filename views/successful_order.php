@@ -34,9 +34,51 @@
                     Tarjeta de debito
                 </p>
             </div>
+            <form action="../controllers/detailController.php" class="list-detail">
+                <input type="hidden" name="_method" value="POST">
+                <input id="json" type="hidden" name="array_json" value="">
+                <!-- <input type="submit" value="Aceptar y regresar"> -->
+            </form>
+            <button id="btnSend" onclick="envio()">Aceptar y regresar</button>
         </div>
     </div>
-    
+    <script>
+        function envio(){
+
+        let list = getJSON();
+        console.log(list);
+
+        function getJSON(){
+            let list2 = JSON.parse(localStorage.getItem("cartList"));
+            var a =[];
+        if(list2 === null){
+            return [];
+        }
+        else{
+            for(var i = 0; i < list2.length; i++){
+                var myObj = {
+                "name" : list2[i].titulo,    //your artist variable
+                "total" : list2[i].precio   //your title variable
+                };
+                a.push(myObj);
+            }
+            // console.log(a);
+            return JSON.stringify(a);
+        }
+        }
+        document.getElementById("json").value = list;
+        let xhttp = new XMLHttpRequest();
+
+        xhttp.open("POST", "../controllers/detailController.php", true);
+
+        xhttp.setRequestHeader("Content-type", "application/json");
+
+        xhttp.send(list);
+
+        location.replace('http://localhost/Proyecto/index.php');
+    }
+        // console.log(document.getElementById("json").value);
+    </script>
     <script src="../assets/js/script_successful_order.js"></script>
 </body>
 </html>
