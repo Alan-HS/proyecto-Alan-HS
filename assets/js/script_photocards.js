@@ -125,8 +125,8 @@ function editProduct(id) {
                 feature2AreaEdit.value = product.feature2;
                 feature3AreaEdit.value = product.feature3;
                 priceAreaEdit.value = product.price;
-                imageAreaEdit.value = product.image;
-                hrefAreaEdit.value = product.href;
+                // imageAreaEdit.value = product.image;
+                // hrefAreaEdit.value = product.href;
 
                 // btnSaveEdit.setAttribute("onclick", "saveEdit(" + product.id + ")"); ESTO ES POR AJAX
                 modalProduct.classList.add("show");

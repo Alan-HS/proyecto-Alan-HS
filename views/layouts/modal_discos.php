@@ -28,14 +28,14 @@
                     <br>
                     <textarea id="form-edit-price" name="price" required></textarea>
                     <br>
-                    <label for="image">Imagen:</label>
+                    <!-- <label for="image">Imagen:</label>
                     <br>
                     <textarea id="form-edit-image" name="image" required></textarea>
                     <br>
                     <label for="href">Href:</label>
                     <br>
                     <textarea id="form-edit-href" name="href" required></textarea>
-                    <br>
+                    <br> -->
                     <input type="submit" value="Guardar" onclick="window.localStorage.clear();">
                 </form>
             </div>

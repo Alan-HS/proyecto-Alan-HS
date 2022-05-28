@@ -26,7 +26,7 @@
             <span id="caracteristica2" style="display: none;">Conexión Plug & Play</span>
             <span id="caracteristica3" style="display: none;">Condensador profesional°</span>
             <!-- Imagen que va a llevar --> <!-- Cambiar esto a cada una con el _1-->
-            <span id="srcimg" style="display: none;">seirenemote_1.png</span>
+            <span id="srcimg" style="display: none;">../images/seirenemote_1.png</span>
 
             <form action="#" id="price-add">
                 <span id="price-text">2000</span> <!-- Cambiar esto a cada una -->

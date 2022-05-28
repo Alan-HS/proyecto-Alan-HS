@@ -109,6 +109,7 @@ function paintProducts(list) {
 
 //Esto es para obtener el texto y empezar a editarlo
 function editProduct(id) {
+    localStorage.clear();
     // console.log(id);
     let xhttp = new XMLHttpRequest();
 
@@ -125,8 +126,8 @@ function editProduct(id) {
                 feature2AreaEdit.value = product.feature2;
                 feature3AreaEdit.value = product.feature3;
                 priceAreaEdit.value = product.price;
-                imageAreaEdit.value = product.image;
-                hrefAreaEdit.value = product.href;
+                // imageAreaEdit.value = product.image;
+                // hrefAreaEdit.value = product.href;
 
                 // btnSaveEdit.setAttribute("onclick", "saveEdit(" + product.id + ")"); ESTO ES POR AJAX
                 modalProduct.classList.add("show");
@@ -139,6 +140,7 @@ function editProduct(id) {
     };
 
     xhttp.send();
+    localStorage.clear();
 }
 
 function deleteProduct(id) {
@@ -157,7 +159,7 @@ function deleteProduct(id) {
     // }, 300);
     idDelete.value = id;
     modalDeleteProduct.classList.add("show");//AGREGO ESTO
-
+    localStorage.clear();
 }
 
 // ------------------ FUNCIONES PARA LOCAL STORAGE ---------

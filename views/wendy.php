@@ -26,7 +26,7 @@
             <span id="caracteristica2" style="display: none;">Edición invierno</span>
             <span id="caracteristica3" style="display: none;">100% original</span>
             <!-- Imagen que va a llevar --> <!-- Cambiar esto a cada una con el _1-->
-            <span id="srcimg" style="display: none;">wendy_1.png</span>
+            <span id="srcimg" style="display: none;">../images/wendy_1.png</span>
 
             <form action="#" id="price-add">
                 <span id="price-text">400</span> <!-- Cambiar esto a cada una -->

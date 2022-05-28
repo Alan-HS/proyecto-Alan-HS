@@ -75,6 +75,7 @@
 
         xhttp.send(list);
 
+        localStorage.clear();
         location.replace('http://localhost/Proyecto/index.php');
     }
         // console.log(document.getElementById("json").value);

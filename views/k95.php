@@ -26,7 +26,7 @@
             <span id="caracteristica2" style="display: none;">6 teclas programables para macros</span>
             <span id="caracteristica3" style="display: none;">Almacenamiento de perfiles de 8mb</span>
             <!-- Imagen que va a llevar --> <!-- Cambiar esto a cada una con el _1-->
-            <span id="srcimg" style="display: none;">k95_1.png</span>
+            <span id="srcimg" style="display: none;">../images/k95_1.png</span>
 
             <form action="#" id="price-add">
                 <span id="price-text">4000</span> <!-- Cambiar esto a cada una -->

@@ -79,7 +79,7 @@ else if($_SERVER["REQUEST_METHOD"] === "POST"){
             postProduct($_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],$photo,"g300s.php",true);
         }
         else if($_POST["_method"] === "PUT"){
-            putProduct($_POST["id"],$_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],$_POST["image"],$_POST["href"],true);
+            putProduct($_POST["id"],$_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],true);
         }
     }
     else if(array_key_exists("id",$_POST)){
@@ -144,19 +144,19 @@ function postProduct($titulo,$feature1,$feature2,$feature3,$price,$image,$href,$
 
 }
 
-function putProduct($id,$titulo,$feature1,$feature2,$feature3,$price,$image,$href,$redirect){
+function putProduct($id,$titulo,$feature1,$feature2,$feature3,$price,$redirect){
     global $connection;
 
     try{
-        $query = $connection->prepare('UPDATE microfonos SET titulo = :titulo, feature1 = :feature1, feature2 = :feature2, feature3 = :feature3, price = :price, image = :image, href = :href WHERE id = :id');//Para actualizar es con una coma
+        $query = $connection->prepare('UPDATE microfonos SET titulo = :titulo, feature1 = :feature1, feature2 = :feature2, feature3 = :feature3, price = :price WHERE id = :id');//Para actualizar es con una coma
         $query->bindParam(':id', $id, PDO::PARAM_INT);
         $query->bindParam(':titulo', $titulo, PDO::PARAM_STR);
         $query->bindParam(':feature1', $feature1, PDO::PARAM_STR);
         $query->bindParam(':feature2', $feature2, PDO::PARAM_STR);
         $query->bindParam(':feature3', $feature3, PDO::PARAM_STR);
         $query->bindParam(':price', $price, PDO::PARAM_INT);
-        $query->bindParam(':image', $image, PDO::PARAM_STR);
-        $query->bindParam(':href', $href, PDO::PARAM_STR);
+        // $query->bindParam(':image', $image, PDO::PARAM_STR);
+        // $query->bindParam(':href', $href, PDO::PARAM_STR);
         $query->execute();
 
         if($query->rowCount() === 0){
