@@ -56,7 +56,9 @@ function paintPrice(){
 
     let totalprice = total;
     localStorage.setItem(keyPrice,JSON.stringify(totalprice));
-
+    if(total === 0){
+        document.getElementById("btncheckout").style.display = "none";
+    }
 }
 
 function updatePrice(){

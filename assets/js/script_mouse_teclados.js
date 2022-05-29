@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function(){
     for(var i = 0; i < modals.length; i++) {
         modals[i].addEventListener("click", function(e) {
             if(e.target === this){
+                localStorage.clear();
                 this.classList.remove("show");
             }
         });
