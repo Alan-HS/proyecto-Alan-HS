@@ -42,7 +42,9 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     else{
         //Obtener todos los registros
         try{
-            $query = $connection->prepare('SELECT * FROM opinions WHERE active = 1');//Se le cambia el nombre ya sea photocard, cds, etc
+            $product_id = $_GET["idProduct"];
+            $query = $connection->prepare('SELECT * FROM opinions WHERE active = 1 AND product_id = :product_id');//Se le cambia el nombre ya sea photocard, cds, etc
+            $query->bindParam(':product_id',$product_id,PDO::PARAM_STR);
             $query->execute();
     
             $opinions = array();//Genera arreglo vacio
@@ -64,13 +66,17 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     
 }
 else if($_SERVER["REQUEST_METHOD"] === "POST"){
+    
     if(array_key_exists("text",$_POST)){//Si se envia por formulario
         //Utilizar el arreglo $_POST
         if($_POST["_method"] === "POST"){
             //Registro nuevo
+            // var_dump($_GET["id"]);
+            // exit();
             session_start();
             $name = $_SESSION["username"];
-            postOpinion($_POST["text"],$name,true);
+            $product_id = $_GET["id"];
+            postOpinion($_POST["text"],$name,$product_id,true);
         }
         else if($_POST["_method"] === "PUT"){
             putOpinion($_POST["id"],$_POST["text"],true);
@@ -101,15 +107,16 @@ else if($_SERVER["REQUEST_METHOD"] === "POST"){
 }
 // var_dump($_SERVER);
 
-function postOpinion($text,$name,$redirect){
+function postOpinion($text,$name,$product_id,$redirect){
     global $connection;
 
     // $timestamp = date("Y-m-d H:i:s", $_SERVER['REQUEST_TIME']);
 
     try{
-        $query = $connection->prepare('INSERT INTO opinions VALUES(NULL, :text, 1, :name)');//Se le cambia el nombre a cds, photocards, etc dependiendo
+        $query = $connection->prepare('INSERT INTO opinions VALUES(NULL, :text, 1, :name, :product_id)');//Se le cambia el nombre a cds, photocards, etc dependiendo
         $query->bindParam(':text', $text, PDO::PARAM_STR);
         $query->bindParam(':name', $name, PDO::PARAM_STR);
+        $query->bindParam(':product_id', $product_id, PDO::PARAM_INT);
         $query->execute();
 
         if($query->rowCount() === 0){

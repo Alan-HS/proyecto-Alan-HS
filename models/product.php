@@ -9,11 +9,11 @@
         private $_feature3;
         private $_price;
         private $_image;
-        private $_href;
+        private $_type;
         private $_active;
 
         //Constructor de php
-        public function __construct($id, $titulo, $feature1, $feature2, $feature3, $price, $image, $href, $active){
+        public function __construct($id, $titulo, $feature1, $feature2, $feature3, $price, $image, $type, $active){
             $this->setId($id);
             $this->setTitulo($titulo);
             $this->setFeature1($feature1);
@@ -21,7 +21,7 @@
             $this->setFeature3($feature3);
             $this->setPrice($price);
             $this->setImage($image);
-            $this->setHref($href);
+            $this->setType($type);
             $this->setActive($active);
         }
 
@@ -82,12 +82,12 @@
             $this->_image = base64_encode($image);
         }
 
-        public function getHref(){
-            return $this->_href;//Como es variable normal es this->
+        public function getType(){
+            return $this->_type;//Como es variable normal es this->
         }
 
-        public function setHref($href){
-            $this->_href = $href;
+        public function setType($type){
+            $this->_type = $type;
         }
 
         public function getActive(){
@@ -108,7 +108,7 @@
             $array["feature3"] = $this->getFeature3();
             $array["price"] = $this->getPrice();
             $array["image"] = $this->getImage();
-            $array["href"] = $this->getHref();            
+            $array["type"] = $this->getType();            
             $array["active"] = $this->getActive();
     
             return $array;

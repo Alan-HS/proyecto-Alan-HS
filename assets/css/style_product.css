@@ -98,10 +98,6 @@
         width: 100%;
     }
     
-    .product-photo{
-        width: 100%;
-    }
-    
     .content{
         padding: 0.5em;
         border-bottom: 0.5px solid gray;
@@ -346,9 +342,6 @@
         border-top: 0.5px solid gray;
     }
 
-    .product-photo{
-        width: 100%;
-    }
 
     .img-ad{
         border-radius: 8px;

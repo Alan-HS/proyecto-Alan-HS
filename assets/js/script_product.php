@@ -19,9 +19,10 @@ var band = 0; //Bandera para el menú
 window.addEventListener("resize",ventana);
 
 document.addEventListener("DOMContentLoaded", function(){
+    // console.log("hola 2");
     //Agregar evento al formulario
     boton.addEventListener("click",despliega_menu);
-    formPrice.addEventListener("submit",submitProduct);
+    // formPrice.addEventListener("submit",submitProduct);
     getOpinions();
     let modals = document.getElementsByClassName("modal");
 
@@ -37,8 +38,10 @@ document.addEventListener("DOMContentLoaded", function(){
 function getOpinions() {
 
     let xhttp = new XMLHttpRequest();
-
-    xhttp.open("GET","../controllers/opinionsController.php",true);//Se le puso esto
+    <?php 
+    // echo $_GET["id"];
+    ?>
+    xhttp.open("GET","../controllers/opinionsController.php?idProduct=<?php echo $_GET["id"];?>",true);//Se le puso esto
 
     xhttp.onreadystatechange = function(){
         if(this.readyState === 4){
@@ -60,6 +63,7 @@ function getOpinions() {
 }
 
 function paintOpinions(list) {
+    // console.log("Hola");
     // let list = getTweets();
     let html = '';
 

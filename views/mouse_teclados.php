@@ -30,6 +30,7 @@
         if($_SESSION["type"] !== "normal") {//Si no es normal
             echo  "<form action=\"../controllers/mouse_tecladosController.php\" method=\"POST\" id=\"form-product\" class=\"form-container\" enctype=\"multipart/form-data\">
             <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            <input type=\"hidden\" name=\"_type\" value=\"mouse_teclados\">
             <label for=\"titulo\">Titulo:</label>
             <textarea name=\"titulo\" required></textarea>
             <input type=\"hidden\" name=\"_method\" value=\"POST\">

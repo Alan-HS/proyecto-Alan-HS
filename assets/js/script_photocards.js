@@ -46,7 +46,7 @@ function getProducts() {
 
     let xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET","../controllers/photocardsController.php",true);//Se le puso esto
+    xhttp.open("GET","../controllers/photocardsController.php?type=photocards",true);//Se le puso esto
 
     xhttp.onreadystatechange = function(){
         if(this.readyState === 4){
@@ -75,9 +75,9 @@ function paintProducts(list) {
     for(var i = 0; i < list.length; i++) {
         html += 
             `<form class="product" id="${list[i].id}">
-            <a href="../views/${list[i].href}"><img class="img-product" src="data:image/jpg;base64,${list[i].image}" alt="Imagen producto lista"></a>
+            <a href="../views/producto.php?id=${list[i].id}"><img class="img-product" src="data:image/jpg;base64,${list[i].image}" alt="Imagen producto lista"></a>
             <div class="product-description">
-                <a href="../views/${list[i].href}"><h2 class="name-product">${list[i].titulo}</h2></a>
+                <a href="../views/producto.php?id=${list[i].id}"><h2 class="name-product">${list[i].titulo}</h2></a>
                 <ul class="list-feature">
                     <li class="featureitem">${list[i].feature1}</li>
                     <li class="featureitem">${list[i].feature2}</li>

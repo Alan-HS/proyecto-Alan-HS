@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
         try{
             $id = $_GET["id"];
 
-            $query = $connection->prepare('SELECT * FROM headsets WHERE id = :id');//Se le cambia el nombre ya sea photocard, cds, etc
+            $query = $connection->prepare('SELECT * FROM productos WHERE id = :id');//Se le cambia el nombre ya sea photocard, cds, etc
             $query->bindParam(':id',$id,PDO::PARAM_INT);
             $query->execute();
     
@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     
     
             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-                $product = new Product($row['id'],$row['titulo'],$row['feature1'],$row['feature2'],$row['feature3'],$row['price'],$row['image'],$row['href'],$row['active']);
+                $product = new Product($row['id'],$row['titulo'],$row['feature1'],$row['feature2'],$row['feature3'],$row['price'],$row['image'],$row['type'],$row['active']);
     
             }
             // var_dump($tweets);
@@ -42,7 +42,9 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     else{
         //Obtener todos los registros
         try{
-            $query = $connection->prepare('SELECT * FROM headsets WHERE active = 1');//Se le cambia el nombre ya sea photocard, cds, etc
+            $type = $_GET["type"];
+            $query = $connection->prepare('SELECT * FROM productos WHERE active = 1 AND type = :type');//Se le cambia el nombre ya sea photocard, cds, etc
+            $query->bindParam(':type',$type,PDO::PARAM_STR);
             $query->execute();
     
             $products = array();//Genera arreglo vacio
@@ -50,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     
             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 
-                $product = new Product($row['id'],$row['titulo'],$row['feature1'],$row['feature2'],$row['feature3'],$row['price'],$row['image'],$row['href'],$row['active']);
+                $product = new Product($row['id'],$row['titulo'],$row['feature1'],$row['feature2'],$row['feature3'],$row['price'],$row['image'],$row['type'],$row['active']);
     
                 $products[] = $product->getArray();//Push
             }
@@ -77,7 +79,7 @@ else if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         if($_POST["_method"] === "POST"){
             //Registro nuevo
-            postProduct($_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],$photo,"g300s.php",true);
+            postProduct($_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],$photo,$_POST["_type"],true);
         }
         else if($_POST["_method"] === "PUT"){
             putProduct($_POST["id"],$_POST["titulo"],$_POST["feature1"],$_POST["feature2"],$_POST["feature3"],$_POST["price"],true);
@@ -108,21 +110,21 @@ else if($_SERVER["REQUEST_METHOD"] === "POST"){
 }
 // var_dump($_SERVER);
 
-function postProduct($titulo,$feature1,$feature2,$feature3,$price,$image,$href,$redirect){
+function postProduct($titulo,$feature1,$feature2,$feature3,$price,$image,$type,$redirect){
     global $connection;
 
     // $timestamp = date("Y-m-d H:i:s", $_SERVER['REQUEST_TIME']);
 
 
     try{
-        $query = $connection->prepare('INSERT INTO headsets VALUES(NULL, :titulo, :feature1, :feature2, :feature3, :price, :image, :href, 1)');//Se le cambia el nombre a cds, photocards, etc dependiendo
+        $query = $connection->prepare('INSERT INTO productos VALUES(NULL, :titulo, :feature1, :feature2, :feature3, :price, :image, :type, 1)');//Se le cambia el nombre a cds, photocards, etc dependiendo
         $query->bindParam(':titulo', $titulo, PDO::PARAM_STR);
         $query->bindParam(':feature1', $feature1, PDO::PARAM_STR);
         $query->bindParam(':feature2', $feature2, PDO::PARAM_STR);
         $query->bindParam(':feature3', $feature3, PDO::PARAM_STR);
         $query->bindParam(':price', $price, PDO::PARAM_INT);
         $query->bindParam(':image', $image, PDO::PARAM_STR);
-        $query->bindParam(':href', $href, PDO::PARAM_STR);
+        $query->bindParam(':type', $type, PDO::PARAM_STR);
         $query->execute();
         if($query->rowCount() === 0){
             redirectError("404: Error en la inserción");
@@ -148,7 +150,7 @@ function putProduct($id,$titulo,$feature1,$feature2,$feature3,$price,$redirect){
     global $connection;
 
     try{
-        $query = $connection->prepare('UPDATE headsets SET titulo = :titulo, feature1 = :feature1, feature2 = :feature2, feature3 = :feature3, price = :price WHERE id = :id');//Para actualizar es con una coma
+        $query = $connection->prepare('UPDATE productos SET titulo = :titulo, feature1 = :feature1, feature2 = :feature2, feature3 = :feature3, price = :price WHERE id = :id');//Para actualizar es con una coma
         $query->bindParam(':id', $id, PDO::PARAM_INT);
         $query->bindParam(':titulo', $titulo, PDO::PARAM_STR);
         $query->bindParam(':feature1', $feature1, PDO::PARAM_STR);
@@ -183,7 +185,7 @@ function deleteProduct($id,$redirect){
     global $connection;
 
     try{
-        $query = $connection->prepare('UPDATE headsets SET active = 0 WHERE id = :id');//Para actualizar es con una coma
+        $query = $connection->prepare('UPDATE productos SET active = 0 WHERE id = :id');//Para actualizar es con una coma
         $query->bindParam(':id', $id, PDO::PARAM_INT);
         $query->execute();
 
