@@ -1,13 +1,13 @@
 
 <script>
 var boton = document.getElementById("boton");
-const cartList = "cartList";
-const nameProduct = document.getElementById("name-product");
-const feature1= document.getElementById("caracteristica1");
-const feature2= document.getElementById("caracteristica2");
-const feature3= document.getElementById("caracteristica3");
-const price = document.getElementById("price-text");
-const image = document.getElementById("srcimg");
+// const cartList = "cartList";
+// const nameProduct = document.getElementById("name-product");
+// const feature1= document.getElementById("caracteristica1");
+// const feature2= document.getElementById("caracteristica2");
+// const feature3= document.getElementById("caracteristica3");
+// const price = document.getElementById("price-text");
+// const image = document.getElementById("srcimg");
 const opinionList = document.getElementsByClassName("opinions")[0];
 const formPrice = document.getElementById("price-add");
 const textAreaEdit = document.getElementById("form-edit-texto");
@@ -191,10 +191,16 @@ function deleteOpinion(id) {
 }
 
 //FUNCIONES LOCAL STORAGE -----------------------------
-function submitProduct(e){
-    e.preventDefault();
-    e.stopPropagation();
-
+function submitProduct(){
+    // e.preventDefault();
+    // e.stopPropagation();
+    const cartList = "cartList";
+    const nameProduct = document.getElementById("name-product");
+    const feature1= document.getElementById("caracteristica1");
+    const feature2= document.getElementById("caracteristica2");
+    const feature3= document.getElementById("caracteristica3");
+    const price = document.getElementById("price-text");
+    const image = document.getElementById("srcimg");
     let product = {
         id: Date.now(),
         titulo: nameProduct.textContent,
@@ -202,7 +208,7 @@ function submitProduct(e){
         caracteristica2: feature2.textContent,
         caracteristica3: feature3.textContent,
         precio: price.textContent,
-        imagen: image.textContent
+        imagen: 'data:image/jpg;base64,' + image.textContent
     };
 
     let list = getCart();
@@ -221,6 +227,7 @@ function submitProduct(e){
 
 
 function getCart(){
+    const cartList = "cartList";
     let list = JSON.parse(localStorage.getItem(cartList));
 
     if(list === null){

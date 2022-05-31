@@ -90,10 +90,10 @@
             <span id="caracteristica3" style="display: none;">${list.feature3}</span>
             <span id="srcimg" style="display: none;">${list.image}</span>
 
-            <form action="#" id="price-add">
+            <div" id="price-add">
                 <span id="price-text">${list.price}</span>
-                <button class="add-to-cart">AGREGAR AL CARRITO</button>
-            </form>
+                <button onclick="submitProduct()" class="add-to-cart">AGREGAR AL CARRITO</button>
+            </div>
         </div>
         <div class="ad">
             <a href="https://los-taroleros.tebex.io/"><img class="img-ad" src="../images/14.png" alt="Anuncio de LosTaroleros"></a>

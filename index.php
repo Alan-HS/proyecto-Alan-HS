@@ -63,43 +63,6 @@
             <a href="https://los-taroleros.tebex.io/"><img class="img-ad" src="images/14.png" alt="Anuncio de LosTaroleros"></a>
         </div>
     </div>
-    <!-- <div class="admin-home">
-        <form class="form-admin" type="text-featured">
-            <textarea class="field-text" name="change-text" cols="80" rows="5" placeholder="Escribe el nuevo texto destacado"></textarea>
-            <button class="button-admin" type="submit">Cambiar texto principal</button>
-        </form>
-        <form class="form-admin" type="img-src">
-            <textarea class="field-src" name="img-src" cols="80" rows="5" placeholder="Escribe la ruta de la imagen"></textarea>
-            <button class="button-admin" type="submit">Cambiar imagen</button>
-        </form>
-    </div> -->
-    <h2 class="title-best-sellers">LOS MÁS VENDIDOS</h2>
-    <div class="best-sellers">
-        <div class="product">
-            <a href="views/g300s.php"><img class="img-product" src="images/2.png" alt="Imagen producto mejor vendido"></a>
-            <h2 class="name-product">Logitech G300s</h2>
-        </div>
-        <div class="product">
-            <a href="views/formulaoflove.php"><img class="img-product" src="images/3.png" alt="Imagen producto mejor vendido"></a>
-            <h2 class="name-product">Formula of Love: O+T=&lt3</h2>
-        </div>
-        <div class="product">
-            <a href="views/seiren_mini.php"><img class="img-product" src="images/4.png" alt="Imagen producto mejor vendido"></a>
-            <h2 class="name-product">Razer Seiren Mini</h2>
-        </div>
-        <div class="product">
-            <a href="views/lightdreamcatcher.php"><img class="img-product" src="images/5.png" alt="Imagen producto mejor vendido"></a>
-            <h2 class="name-product">Lightstick Dreamcatcher</h2>
-        </div>
-        <div class="product">
-            <a href="views/moonbyul.php"><img class="img-product" src="images/6.png" alt="Imagen producto mejor vendido"></a>
-            <h2 class="name-product">Photocard Moonbyul</h2>
-        </div>
-        <div class="product">
-            <a href="views/cloud_flight_s.php"><img class="img-product" src="images/7.png" alt="Imagen producto mejor vendido"></a>
-            <h2 class="name-product">HyperX Cloud Flight S</h2>
-        </div>
-    </div>
     <div class="footer">
         <p class="methods-text">Aceptamos:</p>
         <img src="images/11.png" alt="VISA">
